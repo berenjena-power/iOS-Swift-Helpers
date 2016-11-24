@@ -1,7 +1,7 @@
 
 import Foundation
 
-extension CFString : Hashable {
+extension CFString: Hashable {
     public var hashValue: Int {
         return (self as String).hashValue
     }

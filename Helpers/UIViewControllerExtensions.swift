@@ -2,8 +2,8 @@
 import UIKit
 import Foundation
 
-extension UIViewController {
-    static var topVisibleViewController: UIViewController? {
+public extension UIViewController {
+    public static var topVisibleViewController: UIViewController? {
         if var tc = UIApplication.shared.keyWindow?.rootViewController {
             while let vc = tc.presentedViewController {
                 tc = vc
@@ -13,7 +13,7 @@ extension UIViewController {
         return nil
     }
     
-    var topVisibleViewController: UIViewController {
+    public var topVisibleViewController: UIViewController {
         if let tc = UIViewController.topVisibleViewController {
             return tc
         }
