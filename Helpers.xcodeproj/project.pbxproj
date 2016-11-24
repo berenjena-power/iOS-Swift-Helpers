@@ -16,6 +16,7 @@
 		F231E0B71DE6F961004AEBD0 /* BoolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231E0B61DE6F961004AEBD0 /* BoolExtensions.swift */; };
 		F231E0B91DE6FA94004AEBD0 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231E0B81DE6FA94004AEBD0 /* IntExtensions.swift */; };
 		F231E0BB1DE6FAC7004AEBD0 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231E0BA1DE6FAC7004AEBD0 /* UIViewControllerExtensions.swift */; };
+		F231E0BE1DE713ED004AEBD0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231E0BD1DE713ED004AEBD0 /* Utils.swift */; };
 		F23CA0C91DA69B65006007EF /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CA0C81DA69B65006007EF /* UIColorExtensions.swift */; };
 		F23CA0CC1DA69C1F006007EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23CA0CB1DA69C1F006007EF /* UIKit.framework */; };
 		F23CA0D11DA69DCD006007EF /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CA0D01DA69DCD006007EF /* CGColorExtensions.swift */; };
@@ -39,6 +40,7 @@
 		F231E0B81DE6FA94004AEBD0 /* IntExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
 		F231E0BA1DE6FAC7004AEBD0 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		F231E0BC1DE7091E004AEBD0 /* Test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Test.playground; sourceTree = "<group>"; };
+		F231E0BD1DE713ED004AEBD0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F23CA0C81DA69B65006007EF /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		F23CA0CB1DA69C1F006007EF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F23CA0D01DA69DCD006007EF /* CGColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGColorExtensions.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				F224D6C81DB2406500CBC4FF /* IOSDevice.swift */,
+				F231E0BD1DE713ED004AEBD0 /* Utils.swift */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				F231E0B51DE6F886004AEBD0 /* DateExtensions.swift in Sources */,
 				F224D6C91DB2406500CBC4FF /* IOSDevice.swift in Sources */,
 				F231E0B91DE6FA94004AEBD0 /* IntExtensions.swift in Sources */,
+				F231E0BE1DE713ED004AEBD0 /* Utils.swift in Sources */,
 				F224D6C31DB23C9900CBC4FF /* BundleExtensions.swift in Sources */,
 				F2E465011DB4FE3500602771 /* UIPlaceHolderTextView.swift in Sources */,
 				733D62631DA54F91000DB0E4 /* UIImageViewExtensions.swift in Sources */,
