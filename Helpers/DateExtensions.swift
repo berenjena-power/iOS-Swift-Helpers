@@ -25,9 +25,14 @@ public extension Date {
         return "\(datef.string(from: self)) - \(timef.string(from: self)) a \(timef.string(from: end))"
     }
 
-    public func toFormattedJsonDateString() -> String {
+    public func toFormattedJsonDateString(useUtc: Bool = true) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        if useUtc {
+            dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        } else {
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        }
         let converted = dateFormatter.string(from: self)
         return converted
     }
