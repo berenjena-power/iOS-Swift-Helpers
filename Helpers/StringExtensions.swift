@@ -27,6 +27,28 @@ public extension String {
         return false
     }
     
+    public func toDateFromJsonFormat() -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let dateObj = dateFormatter.date(from: self)
+        
+        return dateObj
+    }
+
+    public func toDateFromSpanishFormat() -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let dateObj = dateFormatter.date(from: self)
+        
+        return dateObj
+    }
+
+    public var isNotEmpty: Bool {
+        get {
+            return !self.isEmpty
+        }
+    }
+    
     public func trim() -> String {
         return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }

@@ -1,9 +1,11 @@
 import UIKit
 
 public extension UIImageView
-{	
-	public func cropAsCircleWithBorder(borderColor : UIColor, strokeWidth: CGFloat)
+{
+	public func cropAsCircleWithBorder(borderColor: UIColor, strokeWidth: Int)
 	{
+        let strokeWidthFloat = CGFloat(strokeWidth)
+        
 		var radius = min(self.bounds.width, self.bounds.height)
 		var drawingRect : CGRect = self.bounds
 		drawingRect.size.width = radius
@@ -13,12 +15,12 @@ public extension UIImageView
 		
 		radius /= 2
 		
-		var path = UIBezierPath(roundedRect: drawingRect.insetBy(dx: strokeWidth/2, dy: strokeWidth/2), cornerRadius: radius)
+		var path = UIBezierPath(roundedRect: drawingRect.insetBy(dx: strokeWidthFloat/2, dy: strokeWidthFloat/2), cornerRadius: radius)
 		let border = CAShapeLayer()
 		border.fillColor = UIColor.clear.cgColor
 		border.path = path.cgPath
 		border.strokeColor = borderColor.cgColor
-		border.lineWidth = strokeWidth
+		border.lineWidth = strokeWidthFloat
 		self.layer.addSublayer(border)
 		
 		path = UIBezierPath(roundedRect: drawingRect, cornerRadius: radius)
