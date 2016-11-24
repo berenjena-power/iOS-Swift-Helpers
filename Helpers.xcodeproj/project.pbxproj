@@ -38,6 +38,7 @@
 		F231E0B61DE6F961004AEBD0 /* BoolExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolExtensions.swift; sourceTree = "<group>"; };
 		F231E0B81DE6FA94004AEBD0 /* IntExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
 		F231E0BA1DE6FAC7004AEBD0 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		F231E0BC1DE7091E004AEBD0 /* Test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Test.playground; sourceTree = "<group>"; };
 		F23CA0C81DA69B65006007EF /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		F23CA0CB1DA69C1F006007EF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F23CA0D01DA69DCD006007EF /* CGColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGColorExtensions.swift; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		F27DA4021DA520D5005B1A33 = {
 			isa = PBXGroup;
 			children = (
+				F231E0BC1DE7091E004AEBD0 /* Test.playground */,
 				F27DA40E1DA520D5005B1A33 /* Helpers */,
 				F27DA40D1DA520D5005B1A33 /* Products */,
 				F23CA0CA1DA69C1F006007EF /* Frameworks */,
