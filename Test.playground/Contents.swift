@@ -16,3 +16,10 @@ let bb = "2016-11-10T23:00:00Z"
 bb.toDateFromJsonFormat()?.toFormattedJsonDateString(useUtc: false)
 
 let aa = (Date(), Date())
+
+
+
+
+let azzz1 = Time(hour: 2, minute: 2, seconds: 3)
+let azzz2 = Time(hour: 2, minute: 5, seconds: 3)
+let acasa = azzz1 < azzz2

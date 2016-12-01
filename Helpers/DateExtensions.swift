@@ -36,4 +36,14 @@ public extension Date {
         let converted = dateFormatter.string(from: self)
         return converted
     }
+    
+    public func toFormattedSpanishTime() -> Time {
+        let timef = DateFormatter()
+        timef.dateFormat = "HH:mm:ss"
+        
+        let timeString = timef.string(from: self)
+        let components = timeString.components(separatedBy: ":")
+        
+        return Time(hour: Int(components[0])!, minute: Int(components[1])!, seconds: Int(components[2])!)
+    }
 }
