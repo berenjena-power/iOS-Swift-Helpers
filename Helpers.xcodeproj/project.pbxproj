@@ -97,7 +97,6 @@
 			children = (
 				F224D6C81DB2406500CBC4FF /* IOSDevice.swift */,
 				F231E0BD1DE713ED004AEBD0 /* Utils.swift */,
-				F26E36B71DF0B8E600F96844 /* Time.swift */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -109,6 +108,14 @@
 				F23CA0CB1DA69C1F006007EF /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F26E36BC1DF188FB00F96844 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F26E36B71DF0B8E600F96844 /* Time.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		F27DA4021DA520D5005B1A33 = {
@@ -132,6 +139,7 @@
 		F27DA40E1DA520D5005B1A33 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F26E36BC1DF188FB00F96844 /* Models */,
 				F2E464FF1DB4FE1800602771 /* Views */,
 				F224D6C71DB2405600CBC4FF /* Others */,
 				F224D6C61DB2404600CBC4FF /* Extensions */,

@@ -15,13 +15,14 @@ let converted = dateFormatter.string(from: Date())
 let bb = "2016-11-10T23:00:00Z"
 bb.toDateFromJsonFormat()?.toFormattedJsonDateString(useUtc: false)
 
-let aa = (Date(), Date())
-
-
-
+Date().toFormattedSpanishFullDateString()
+Date().toFormattedSpanishFullDateString(withEndDate: Date() + 5000)
 
 let azzz1 = Time(hour: 2, minute: 2, seconds: 3)
 let azzz2 = Time(hour: 2, minute: 5, seconds: 3)
 let azzz3 = Time(timeString: "14:33:45")?.seconds
 let azzz4 = Time(timeString: "12:32")?.seconds
 let acasa = azzz1 < azzz2
+
+azzz1.toFormattedTimeString()
+azzz1.toFormattedTimeString(showSeconds: true)

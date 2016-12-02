@@ -13,26 +13,33 @@ public struct Time: Comparable {
     }
     
     public init?(timeString: String) {
-        let components = timeString.components(separatedBy: ":")
+        let parts = timeString.components(separatedBy: ":")
         
-        guard components.count == 2 || components.count == 3 else {
+        guard parts.count == 2 || parts.count == 3 else {
             return nil
         }
-        guard let h = Int(components[0]), let m = Int(components[1]) else {
+        guard let h = Int(parts[0]), let m = Int(parts[1]) else {
             return nil
         }
         
         self.hour = h
         self.minute = m
         
-        if components.count == 3 {
-            guard let s = Int(components[2]) else {
+        if parts.count == 3 {
+            guard let s = Int(parts[2]) else {
                 return nil
             }
             self.seconds = s
         } else {
             self.seconds = 0
         }
+    }
+    
+    public func toFormattedTimeString(showSeconds: Bool = false) -> String {
+        if showSeconds {
+            return "\(String(format: "%02d", hour)):\(String(format: "%02d", minute)):\(String(format: "%02d", seconds))"
+        }
+        return "\(String(format: "%02d", hour)):\(String(format: "%02d", minute))h."
     }
 }
 
