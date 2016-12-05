@@ -26,3 +26,8 @@ let acasa = azzz1 < azzz2
 
 azzz1.toFormattedTimeString()
 azzz1.toFormattedTimeString(showSeconds: true)
+
+
+let cosas = ["Cróssfit", "baba", "caca", "culo"]
+"voy a crossfit".isMatched(by: cosas)
+

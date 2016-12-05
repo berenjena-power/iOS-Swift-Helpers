@@ -77,4 +77,16 @@ public extension String {
         let endIndex = index(from: r.upperBound)
         return substring(with: startIndex..<endIndex)
     }
+    
+    public func isMatched(by occurrences: [String]) -> Bool {
+        return occurrences.matchWith(occurrence: self)
+    }
+}
+
+public extension Sequence where Iterator.Element == String {
+    public func matchWith(occurrence: String) -> Bool {
+        return contains(where: { el in
+            return occurrence.range(of: el, options: [.diacriticInsensitive, .caseInsensitive], range: nil, locale: nil) != nil
+        })
+    }
 }
