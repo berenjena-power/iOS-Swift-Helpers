@@ -5,6 +5,9 @@ import Helpers
 
 let a = Date()
 a.toFormattedSpanishFullDateString(withEndDate: Date() + 300)
+a.day
+a.month
+a.year
 
 let dateFormatter = DateFormatter()
 dateFormatter.timeZone = TimeZone(abbreviation: "UTC")

@@ -2,6 +2,41 @@
 import Foundation
 
 public extension Date {
+    public var year: Int {
+        get {
+            let calendar = Calendar.current
+            return calendar.component(.year, from: self)
+        }
+    }
+
+    public var month: Int {
+        get {
+            let calendar = Calendar.current
+            return calendar.component(.month, from: self)
+        }
+    }
+
+    public var day: Int {
+        get {
+            let calendar = Calendar.current
+            return calendar.component(.day, from: self)
+        }
+    }
+    
+    public var hour: Int {
+        get {
+            let calendar = Calendar.current
+            return calendar.component(.hour, from: self)
+        }
+    }
+    
+    public var minute: Int {
+        get {
+            let calendar = Calendar.current
+            return calendar.component(.minute, from: self)
+        }
+    }
+    
     public func toFormattedSpanishDateString() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
@@ -31,6 +66,13 @@ public extension Date {
         }
         
         return "\(datef.string(from: self)) - \(timef.string(from: self)) a \(timef.string(from: end))"
+    }
+    
+    public func toFormattedSpanishMonthName() -> String {
+        let datef = DateFormatter()
+        datef.dateFormat = "M MMMM"
+        
+        return "\(datef.string(from: self))"
     }
 
     public func toFormattedJsonDateString(useUtc: Bool = true) -> String {
