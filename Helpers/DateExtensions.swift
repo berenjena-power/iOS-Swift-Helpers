@@ -86,6 +86,21 @@ public extension Date {
         let converted = dateFormatter.string(from: self)
         return converted
     }
+
+    public func dateByAdding(years: Int) -> Date {
+        let components = DateComponents(year: years)
+        return Calendar.current.date(byAdding: components, to: self)!
+    }
+    
+    public func dateByAdding(days: Int) -> Date {
+        let components = DateComponents(day: days)
+        return Calendar.current.date(byAdding: components, to: self)!
+    }
+    
+    public func dateByAdding(months: Int) -> Date {
+        let components = DateComponents(month: months)
+        return Calendar.current.date(byAdding: components, to: self)!
+    }
     
     var localTime: Time {
         get {

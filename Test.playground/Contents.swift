@@ -9,6 +9,10 @@ a.day
 a.month
 a.year
 
+a.dateByAdding(days: -32)
+a.dateByAdding(months: -1)
+a.dateByAdding(years: 23)
+
 let dateFormatter = DateFormatter()
 dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
 dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
