@@ -187,3 +187,7 @@ public extension UIDevice {
         return deviceModel.name.contains("iPad")
     }
 }
+
+public var isIpad: Bool {
+    return UIDevice.current.isIpad
+}
