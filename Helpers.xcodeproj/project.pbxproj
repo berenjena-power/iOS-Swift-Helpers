@@ -25,6 +25,7 @@
 		F26E36B81DF0B8E600F96844 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E36B71DF0B8E600F96844 /* Time.swift */; };
 		F27DA41D1DA520D5005B1A33 /* Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = F27DA40F1DA520D5005B1A33 /* Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F27DA4271DA5282E005B1A33 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */; };
+		F2A5C10D1E1F02790089EFCF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */; };
 		F2A5C1131E1F04930089EFCF /* PausableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C1121E1F04930089EFCF /* PausableTimer.swift */; };
 		F2E465011DB4FE3500602771 /* UIPlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */; };
 		F2E465031DB5052A00602771 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465021DB5052A00602771 /* CGFloatExtensions.swift */; };
@@ -53,6 +54,7 @@
 		F27DA40F1DA520D5005B1A33 /* Helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		F27DA4101DA520D5005B1A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
+		F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		F2A5C1121E1F04930089EFCF /* PausableTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausableTimer.swift; sourceTree = "<group>"; };
 		F2E464EC1DB4EA3600602771 /* Logger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logger.framework; path = "../Logger/build/Debug-iphoneos/Logger.framework"; sourceTree = "<group>"; };
 		F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPlaceHolderTextView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				F23CA0C81DA69B65006007EF /* UIColorExtensions.swift */,
 				806133D31DABE4E400334A7A /* UITableViewCellExtensions.swift */,
 				F231E0BA1DE6FAC7004AEBD0 /* UIViewControllerExtensions.swift */,
+				F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */,
 				F23CA0D01DA69DCD006007EF /* CGColorExtensions.swift */,
 				F2E465021DB5052A00602771 /* CGFloatExtensions.swift */,
 				F25954451DAFD9ED00BDA046 /* CFStringExtensions.swift */,
@@ -247,6 +250,7 @@
 				F23CA1091DA81BDE006007EF /* StringExtensions.swift in Sources */,
 				F23CA0D11DA69DCD006007EF /* CGColorExtensions.swift in Sources */,
 				F2E465031DB5052A00602771 /* CGFloatExtensions.swift in Sources */,
+				F2A5C10D1E1F02790089EFCF /* UIViewExtensions.swift in Sources */,
 				F25954461DAFD9ED00BDA046 /* CFStringExtensions.swift in Sources */,
 				F27DA4271DA5282E005B1A33 /* UIDeviceExtensions.swift in Sources */,
 				806133D41DABE4E400334A7A /* UITableViewCellExtensions.swift in Sources */,
