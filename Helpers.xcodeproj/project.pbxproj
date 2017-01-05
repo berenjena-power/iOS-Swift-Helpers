@@ -25,6 +25,7 @@
 		F26E36B81DF0B8E600F96844 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E36B71DF0B8E600F96844 /* Time.swift */; };
 		F27DA41D1DA520D5005B1A33 /* Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = F27DA40F1DA520D5005B1A33 /* Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F27DA4271DA5282E005B1A33 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */; };
+		F2A5C1131E1F04930089EFCF /* PausableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C1121E1F04930089EFCF /* PausableTimer.swift */; };
 		F2E465011DB4FE3500602771 /* UIPlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */; };
 		F2E465031DB5052A00602771 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465021DB5052A00602771 /* CGFloatExtensions.swift */; };
 		F2EEDEDA1DB91BFA00314944 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EEDED91DB91BFA00314944 /* ArrayExtensions.swift */; };
@@ -52,6 +53,7 @@
 		F27DA40F1DA520D5005B1A33 /* Helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		F27DA4101DA520D5005B1A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
+		F2A5C1121E1F04930089EFCF /* PausableTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausableTimer.swift; sourceTree = "<group>"; };
 		F2E464EC1DB4EA3600602771 /* Logger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logger.framework; path = "../Logger/build/Debug-iphoneos/Logger.framework"; sourceTree = "<group>"; };
 		F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPlaceHolderTextView.swift; sourceTree = "<group>"; };
 		F2E465021DB5052A00602771 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				F224D6C81DB2406500CBC4FF /* IOSDevice.swift */,
 				F231E0BD1DE713ED004AEBD0 /* Utils.swift */,
+				F2A5C1121E1F04930089EFCF /* PausableTimer.swift */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				F27DA4271DA5282E005B1A33 /* UIDeviceExtensions.swift in Sources */,
 				806133D41DABE4E400334A7A /* UITableViewCellExtensions.swift in Sources */,
 				F231E0B51DE6F886004AEBD0 /* DateExtensions.swift in Sources */,
+				F2A5C1131E1F04930089EFCF /* PausableTimer.swift in Sources */,
 				F224D6C91DB2406500CBC4FF /* IOSDevice.swift in Sources */,
 				F231E0B91DE6FA94004AEBD0 /* IntExtensions.swift in Sources */,
 				F231E0BE1DE713ED004AEBD0 /* Utils.swift in Sources */,
