@@ -7,8 +7,10 @@ public extension Bool {
     }
     
     public var isFalse: Bool {
-        get {
-            return !self
-        }
+        return !self
+    }
+    
+    public var not: Bool {
+        return !self
     }
 }
