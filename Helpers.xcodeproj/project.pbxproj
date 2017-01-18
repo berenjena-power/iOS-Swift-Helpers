@@ -27,6 +27,7 @@
 		F27DA41D1DA520D5005B1A33 /* Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = F27DA40F1DA520D5005B1A33 /* Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F27DA4271DA5282E005B1A33 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */; };
 		F298CD1B1E2F792000964328 /* AnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298CD1A1E2F792000964328 /* AnimationDirection.swift */; };
+		F298CD361E2FA46000964328 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298CD351E2FA46000964328 /* UIApplicationExtensions.swift */; };
 		F2A5C10D1E1F02790089EFCF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */; };
 		F2A5C1131E1F04930089EFCF /* PausableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C1121E1F04930089EFCF /* PausableTimer.swift */; };
 		F2E465011DB4FE3500602771 /* UIPlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */; };
@@ -58,6 +59,7 @@
 		F27DA4101DA520D5005B1A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
 		F298CD1A1E2F792000964328 /* AnimationDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDirection.swift; sourceTree = "<group>"; };
+		F298CD351E2FA46000964328 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		F2A5C1121E1F04930089EFCF /* PausableTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausableTimer.swift; sourceTree = "<group>"; };
 		F2E464EC1DB4EA3600602771 /* Logger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logger.framework; path = "../Logger/build/Debug-iphoneos/Logger.framework"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		F224D6C61DB2404600CBC4FF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F298CD351E2FA46000964328 /* UIApplicationExtensions.swift */,
 				F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */,
 				733D62601DA54D79000DB0E4 /* UIImageExtensions.swift */,
 				733D62621DA54F91000DB0E4 /* UIImageViewExtensions.swift */,
@@ -268,6 +271,7 @@
 				F231E0BE1DE713ED004AEBD0 /* Utils.swift in Sources */,
 				F224D6C31DB23C9900CBC4FF /* BundleExtensions.swift in Sources */,
 				F2E465011DB4FE3500602771 /* UIPlaceHolderTextView.swift in Sources */,
+				F298CD361E2FA46000964328 /* UIApplicationExtensions.swift in Sources */,
 				733D62631DA54F91000DB0E4 /* UIImageViewExtensions.swift in Sources */,
 				F231E0B71DE6F961004AEBD0 /* BoolExtensions.swift in Sources */,
 				F20667C51E23DD600075DC32 /* CollectionExtensions.swift in Sources */,
