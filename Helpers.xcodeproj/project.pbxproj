@@ -28,6 +28,8 @@
 		F27DA4271DA5282E005B1A33 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */; };
 		F298CD1B1E2F792000964328 /* AnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298CD1A1E2F792000964328 /* AnimationDirection.swift */; };
 		F298CD361E2FA46000964328 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298CD351E2FA46000964328 /* UIApplicationExtensions.swift */; };
+		F29C4A5F1E2FC850008018E4 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C4A5E1E2FC850008018E4 /* JSON.swift */; };
+		F29C4A611E2FC881008018E4 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C4A601E2FC881008018E4 /* Decodable.swift */; };
 		F2A5C10D1E1F02790089EFCF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */; };
 		F2A5C1131E1F04930089EFCF /* PausableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C1121E1F04930089EFCF /* PausableTimer.swift */; };
 		F2E465011DB4FE3500602771 /* UIPlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */; };
@@ -60,6 +62,8 @@
 		F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
 		F298CD1A1E2F792000964328 /* AnimationDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDirection.swift; sourceTree = "<group>"; };
 		F298CD351E2FA46000964328 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
+		F29C4A5E1E2FC850008018E4 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		F29C4A601E2FC881008018E4 /* Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
 		F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		F2A5C1121E1F04930089EFCF /* PausableTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausableTimer.swift; sourceTree = "<group>"; };
 		F2E464EC1DB4EA3600602771 /* Logger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logger.framework; path = "../Logger/build/Debug-iphoneos/Logger.framework"; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 		F27DA40E1DA520D5005B1A33 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F29C4A5D1E2FC83E008018E4 /* Network */,
 				F26E36BC1DF188FB00F96844 /* Models */,
 				F2E464FF1DB4FE1800602771 /* Views */,
 				F224D6C71DB2405600CBC4FF /* Others */,
@@ -162,6 +167,15 @@
 				F27DA4101DA520D5005B1A33 /* Info.plist */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F29C4A5D1E2FC83E008018E4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F29C4A5E1E2FC850008018E4 /* JSON.swift */,
+				F29C4A601E2FC881008018E4 /* Decodable.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		F2E464FF1DB4FE1800602771 /* Views */ = {
@@ -258,7 +272,9 @@
 				F231E0BB1DE6FAC7004AEBD0 /* UIViewControllerExtensions.swift in Sources */,
 				F23CA1091DA81BDE006007EF /* StringExtensions.swift in Sources */,
 				F23CA0D11DA69DCD006007EF /* CGColorExtensions.swift in Sources */,
+				F29C4A611E2FC881008018E4 /* Decodable.swift in Sources */,
 				F2E465031DB5052A00602771 /* CGFloatExtensions.swift in Sources */,
+				F29C4A5F1E2FC850008018E4 /* JSON.swift in Sources */,
 				F2A5C10D1E1F02790089EFCF /* UIViewExtensions.swift in Sources */,
 				F25954461DAFD9ED00BDA046 /* CFStringExtensions.swift in Sources */,
 				F27DA4271DA5282E005B1A33 /* UIDeviceExtensions.swift in Sources */,
