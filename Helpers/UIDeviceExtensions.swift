@@ -1,6 +1,30 @@
 import Foundation
 import UIKit
 
+public extension UIDevice {
+    public var deviceModel: DeviceModel {
+        var systemInfo = utsname()
+        uname(&systemInfo)
+        
+        let machine = systemInfo.machine
+        let mirror = Mirror(reflecting: machine)
+        var identifier = ""
+        
+        for child in mirror.children {
+            if let value = child.value as? Int8, value != 0 {
+                let escaped = UnicodeScalar(UInt8(value)).escaped(asASCII: false)
+                identifier.append(escaped)
+            }
+        }
+        
+        return parseDeviceModel(identifier)
+    }
+    
+    public var isIpad: Bool {
+        return deviceModel.name.contains("iPad")
+    }
+}
+
 public enum DeviceModel {
     
     case iPhone1G
@@ -159,31 +183,6 @@ fileprivate func parseDeviceModel(_ identifier: String) -> DeviceModel {
         }
         
         return .unknown(model: identifier)
-    }
-}
-
-public extension UIDevice {
-    
-    public var deviceModel: DeviceModel {
-        var systemInfo = utsname()
-        uname(&systemInfo)
-        
-        let machine = systemInfo.machine
-        let mirror = Mirror(reflecting: machine)
-        var identifier = ""
-        
-        for child in mirror.children {
-            if let value = child.value as? Int8, value != 0 {
-                let escaped = UnicodeScalar(UInt8(value)).escaped(asASCII: false)
-                identifier.append(escaped)
-            }
-        }
-        
-        return parseDeviceModel(identifier)
-    }
-    
-    public var isIpad: Bool {
-        return deviceModel.name.contains("iPad")
     }
 }
 

@@ -12,10 +12,11 @@ public protocol ArrayDecodable {
 public extension Decodable {
     public static func create(fromJSONData jsonData: Data) -> Self? {
         do {
-            guard let object = try JSONSerialization.jsonObject(with: jsonData, options: []) as? NSDictionary else {
+            guard let object = try JSONSerialization.jsonObject(with: jsonData, options: []) as? NSDictionary,
+                  let json = object as? JSON else {
                 return nil
             }
-            return create(fromJSON: object as! JSON)
+            return create(fromJSON: json)
         } catch {
             return nil
         }

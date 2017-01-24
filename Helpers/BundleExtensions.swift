@@ -1,13 +1,18 @@
-
 import Foundation
 
 public extension Bundle {
     public var buildVersion: String {
-        return object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
+        guard let version = object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String else {
+            return "-"
+        }
+        return version
     }
     
     public var appVersion: String {
-        return object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        guard let version = object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else {
+            return "-"
+        }
+        return version
     }
     
     public var applicationReadableVersion: String {

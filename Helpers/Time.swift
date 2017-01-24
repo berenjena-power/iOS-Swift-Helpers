@@ -1,4 +1,3 @@
-
 import Foundation
 
 public struct Time: Comparable {
@@ -43,11 +42,11 @@ public struct Time: Comparable {
     }
 }
 
-public func ==(lhs: Time, rhs: Time) -> Bool {
+public func == (lhs: Time, rhs: Time) -> Bool {
     return lhs.hour == rhs.hour && lhs.minute == rhs.minute && lhs.seconds == rhs.seconds
 }
 
-public func <(lhs: Time, rhs: Time) -> Bool {
+public func < (lhs: Time, rhs: Time) -> Bool {
     if lhs.hour == rhs.hour && lhs.minute == rhs.minute {
         return lhs.seconds < rhs.seconds
     }

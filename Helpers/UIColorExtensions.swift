@@ -1,11 +1,9 @@
-
 import Foundation
 import UIKit
 
-public extension UIColor
-{
+public extension UIColor {
     public static func fromHex(_ hexColor: String) -> UIColor {
-        var rgbValue:UInt32 = 0
+        var rgbValue: UInt32 = 0
         Scanner(string: hexColor.replacingOccurrences(of: "#", with: "")).scanHexInt32(&rgbValue)
         
         let components = (

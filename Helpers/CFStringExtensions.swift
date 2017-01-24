@@ -1,4 +1,3 @@
-
 import Foundation
 
 extension CFString: Hashable {
@@ -7,6 +6,6 @@ extension CFString: Hashable {
     }
 }
 
-public func ==(lhs: CFString, rhs: CFString) -> Bool {
+public func == (lhs: CFString, rhs: CFString) -> Bool {
     return CFStringCompare(lhs, rhs, CFStringCompareFlags()) == .compareEqualTo
 }

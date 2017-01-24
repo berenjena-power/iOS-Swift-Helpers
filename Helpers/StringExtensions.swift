@@ -1,4 +1,3 @@
-
 import Foundation
 
 public extension String {
@@ -45,9 +44,7 @@ public extension String {
     }
 
     public var isNotEmpty: Bool {
-        get {
-            return !self.isEmpty
-        }
+        return !self.isEmpty
     }
     
     public func trim() -> String {
@@ -72,9 +69,9 @@ public extension String {
         return substring(to: toIndex)
     }
     
-    public func substring(with r: Range<Int>) -> String {
-        let startIndex = index(from: r.lowerBound)
-        let endIndex = index(from: r.upperBound)
+    public func substring(with range: Range<Int>) -> String {
+        let startIndex = index(from: range.lowerBound)
+        let endIndex = index(from: range.upperBound)
         return substring(with: startIndex..<endIndex)
     }
     

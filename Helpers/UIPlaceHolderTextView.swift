@@ -1,9 +1,8 @@
-
 import Foundation
 import UIKit
 
 @IBDesignable
-public class UIPlaceHolderTextView : UITextView {
+public class UIPlaceHolderTextView: UITextView {
     var placeholderLabel: UILabel!
     
     override init(frame: CGRect, textContainer: NSTextContainer?) {
@@ -32,25 +31,21 @@ public class UIPlaceHolderTextView : UITextView {
         }
     }
     
-    @IBInspectable
-    public var placeholder = "" {
+    @IBInspectable public var placeholder: String = "" {
         didSet {
             placeholderLabel.text = placeholder
             placeholderLabel.sizeToFit()
             self.sendSubview(toBack: placeholderLabel)
             
-            if (placeholder.isEmpty == false && text.isEmpty) {
+            if placeholder.isEmpty == false && text.isEmpty {
                 placeholderLabel.alpha = 1
-            }
-            else
-            {
+            } else {
                 placeholderLabel.alpha = 0
             }
         }
     }
     
-    @IBInspectable
-    public var placeholderColor = UIColor.lightGray {
+    @IBInspectable public var placeholderColor: UIColor = UIColor.lightGray {
         didSet {
             placeholderLabel.textColor = placeholderColor
         }
@@ -59,27 +54,28 @@ public class UIPlaceHolderTextView : UITextView {
     // MARK: - Private methods
     
     private func commonInit() {
-        if (placeholderLabel == nil) {
-            placeholderLabel = UILabel.init(frame: CGRect(x: 4,y: 8,width: self.bounds.size.width - 8,height: 0))
+        if placeholderLabel == nil {
+            placeholderLabel = UILabel(frame: CGRect(x: 4, y: 8, width: bounds.size.width - 8, height: 0))
             placeholderLabel.lineBreakMode = .byCharWrapping
             placeholderLabel.numberOfLines = 0
             placeholderLabel.font = font
             placeholderLabel.backgroundColor = UIColor.clear
             placeholderLabel.textColor = placeholderColor
             placeholderLabel.alpha = 0
-            self.addSubview(placeholderLabel!)
+            addSubview(placeholderLabel!)
         }
     }
     
-    @objc private func textChanged(_ notification: Notification?) {
-        if (placeholder.isEmpty) {
-            return;
+    @objc
+    private func textChanged(_ notification: Notification?) {
+        if placeholder.isEmpty {
+            return
         }
         
-        if (self.text.isEmpty) {
-            self.placeholderLabel.alpha = 1
+        if text.isEmpty {
+            placeholderLabel.alpha = 1
         } else {
-            self.placeholderLabel.alpha = 0
+            placeholderLabel.alpha = 0
         }
     }
 }

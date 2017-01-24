@@ -1,16 +1,15 @@
-
 import Foundation
 
 public class PausableTimer {
     
     private var timerDuration: Double
-    private var timerFiredCompletion: ()->()
+    private var timerFiredCompletion: () -> Void
     
     private var timer: Timer
     private var startDate: Date?
     private var timeElapsed: Double
     
-    public init(timerDuration: Double, timerFiredCompletion: @escaping ()->()) {
+    public init(timerDuration: Double, timerFiredCompletion: @escaping () -> Void) {
         self.timerDuration = timerDuration
         self.timerFiredCompletion = timerFiredCompletion
         timer = Timer()
@@ -41,7 +40,8 @@ public class PausableTimer {
         timer.invalidate()
     }
     
-    @objc private func timerFired() {
+    @objc
+    private func timerFired() {
         timer.invalidate()
         timerFiredCompletion()
     }

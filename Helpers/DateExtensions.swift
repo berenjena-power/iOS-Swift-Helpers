@@ -1,40 +1,29 @@
-
 import Foundation
 
 public extension Date {
     public var year: Int {
-        get {
-            let calendar = Calendar.current
-            return calendar.component(.year, from: self)
-        }
+        let calendar = Calendar.current
+        return calendar.component(.year, from: self)
     }
 
     public var month: Int {
-        get {
-            let calendar = Calendar.current
-            return calendar.component(.month, from: self)
-        }
+        let calendar = Calendar.current
+        return calendar.component(.month, from: self)
     }
 
     public var day: Int {
-        get {
-            let calendar = Calendar.current
-            return calendar.component(.day, from: self)
-        }
+        let calendar = Calendar.current
+        return calendar.component(.day, from: self)
     }
     
     public var hour: Int {
-        get {
-            let calendar = Calendar.current
-            return calendar.component(.hour, from: self)
-        }
+        let calendar = Calendar.current
+        return calendar.component(.hour, from: self)
     }
     
     public var minute: Int {
-        get {
-            let calendar = Calendar.current
-            return calendar.component(.minute, from: self)
-        }
+        let calendar = Calendar.current
+        return calendar.component(.minute, from: self)
     }
     
     public func toFormattedSpanishDateString() -> String {
@@ -103,14 +92,12 @@ public extension Date {
     }
     
     var localTime: Time {
-        get {
-            let timef = DateFormatter()
-            timef.dateFormat = "HH:mm:ss"
-            
-            let timeString = timef.string(from: self)
-            let components = timeString.components(separatedBy: ":")
-            
-            return Time(hour: Int(components[0])!, minute: Int(components[1])!, seconds: Int(components[2])!)
-        }
+        let timef = DateFormatter()
+        timef.dateFormat = "HH:mm:ss"
+        
+        let timeString = timef.string(from: self)
+        let components = timeString.components(separatedBy: ":")
+        
+        return Time(hour: Int(components[0])!, minute: Int(components[1])!, seconds: Int(components[2])!)
     }
 }
