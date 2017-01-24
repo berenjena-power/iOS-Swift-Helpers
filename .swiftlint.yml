@@ -1,0 +1,67 @@
+disabled_rules: 
+  - trailing_whitespace
+opt_in_rules: 
+  - empty_count
+  #- switch_case_on_newline
+  - redundant_nil_coalescing
+  - prohibited_super_call
+  #- private_outlet
+  - overridden_super_call
+  - operator_usage_whitespace
+  - number_separator
+  - nimble_operator
+  #- force_unwrapping
+  - explicit_init
+  - conditional_returns_on_newline
+  - closure_spacing
+  - closure_end_indentation
+  - attributes
+included: 
+  - Helpers
+excluded: 
+  - Carthage
+  - Pods
+
+force_cast: 
+  severity: warning
+force_try:
+  severity: warning
+
+function_body_length: 
+  warning: 60
+  error: 100
+cyclomatic_complexity:
+  warning: 50
+  error: 70
+type_body_length:
+  warning: 400
+  error: 500 
+line_length:
+  warning: 250
+  error: 400
+file_length:
+  warning: 700
+  error: 1200
+type_name:
+  min_length: 3
+  max_length: 40
+  excluded:
+    - iPhone
+    - my
+variable_name:
+  min_length: 3
+  max_length: 30
+  excluded: 
+    - i
+    - to
+    - x
+    - y
+    - z
+    - a
+    - b
+    - map
+    - app
+    - id
+    - URL
+    - GlobalAPIKey
+reporter: "xcode" 
