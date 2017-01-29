@@ -9,7 +9,7 @@ public class NetworkRequest {
     let soapMessage: String
     let parameters: JSON
     
-    init(url: URL, method: Method, auth: Authentication, queryStringParameters: [String: String], header: JSON, soapMessage: String = "", parameters: JSON = [:]) {
+    public init(url: URL, method: Method, auth: Authentication, queryStringParameters: [String: String], header: JSON, soapMessage: String = "", parameters: JSON = [:]) {
         self.url = url
         self.method = method
         self.auth = auth
