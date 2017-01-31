@@ -1,6 +1,6 @@
 import Foundation
 
-public typealias JSON = [String : Any]
+public typealias JSON = [String: Any]
 
 public extension Dictionary where Key: ExpressibleByStringLiteral, Value: Any {
     public func toJSONString() -> String? {
