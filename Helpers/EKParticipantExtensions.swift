@@ -1,4 +1,5 @@
 import Foundation
+import EventKit
 
 public extension EKParticipant {
     public var email: String? {
