@@ -42,7 +42,7 @@ public class NetworkRequest {
         request.httpMethod = method.rawValue
         request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
         request.httpMethod = method.rawValue
-        request.allHTTPHeaderFields = header as? [String : String]
+        request.allHTTPHeaderFields = header as? [String: String]
         return request
     }
     

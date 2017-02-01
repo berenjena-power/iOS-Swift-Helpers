@@ -35,6 +35,7 @@
 		F29C4A5F1E2FC850008018E4 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C4A5E1E2FC850008018E4 /* JSON.swift */; };
 		F29C4A611E2FC881008018E4 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C4A601E2FC881008018E4 /* Decodable.swift */; };
 		F29DB5601E41FCB10090FFB9 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29DB55F1E41FCB10090FFB9 /* Encodable.swift */; };
+		F29DB5621E41FCF40090FFB9 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29DB5611E41FCF40090FFB9 /* Value.swift */; };
 		F2A5C10D1E1F02790089EFCF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */; };
 		F2A5C1131E1F04930089EFCF /* PausableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C1121E1F04930089EFCF /* PausableTimer.swift */; };
 		F2E465011DB4FE3500602771 /* UIPlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */; };
@@ -74,6 +75,7 @@
 		F29C4A5E1E2FC850008018E4 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		F29C4A601E2FC881008018E4 /* Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
 		F29DB55F1E41FCB10090FFB9 /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		F29DB5611E41FCF40090FFB9 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		F2A5C1121E1F04930089EFCF /* PausableTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausableTimer.swift; sourceTree = "<group>"; };
 		F2E464EC1DB4EA3600602771 /* Logger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logger.framework; path = "../Logger/build/Debug-iphoneos/Logger.framework"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				F29C4A601E2FC881008018E4 /* Decodable.swift */,
 				F29DB55F1E41FCB10090FFB9 /* Encodable.swift */,
 				F217343B1E3E0CFF00F1EEAA /* Request.swift */,
+				F29DB5611E41FCF40090FFB9 /* Value.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				F231E0BE1DE713ED004AEBD0 /* Utils.swift in Sources */,
 				F29DB5601E41FCB10090FFB9 /* Encodable.swift in Sources */,
 				F224D6C31DB23C9900CBC4FF /* BundleExtensions.swift in Sources */,
+				F29DB5621E41FCF40090FFB9 /* Value.swift in Sources */,
 				F2E465011DB4FE3500602771 /* UIPlaceHolderTextView.swift in Sources */,
 				F217343A1E3E047B00F1EEAA /* URLExtensions.swift in Sources */,
 				F298CD361E2FA46000964328 /* UIApplicationExtensions.swift in Sources */,
