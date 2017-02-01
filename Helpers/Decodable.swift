@@ -22,11 +22,3 @@ public extension Decodable {
         }
     }
 }
-
-public protocol Encodable {
-    func toJSON() -> JSON?
-}
-
-public protocol ArrayEncodable {
-    func toJSON() -> [JSON]?
-}
