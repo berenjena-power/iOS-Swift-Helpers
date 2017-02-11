@@ -79,11 +79,10 @@ public extension String {
         return occurrences.anyMatch(with: self)
     }
     
-    public func isValidUrl() -> Bool {
-        if let _ = NSURL(string: self) {
-            return true
-        }
-        return false
+    public func isValidInternetUrl() -> Bool {
+        let regEx = "((https|http)://)((\\w|-)+)(([.]|[/])((\\w|-)+))+"
+        let predicate = NSPredicate(format:"SELF MATCHES %@", argumentArray:[regEx])
+        return predicate.evaluate(with: self)
     }
     
     public func isValidEmail() -> Bool {

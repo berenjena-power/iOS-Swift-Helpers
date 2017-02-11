@@ -38,6 +38,9 @@ azzz1.toFormattedTimeString(showSeconds: true)
 let cosas = ["Cróssfit", "baba", "caca", "culo"]
 cosas.anyMatch(with: "crossfit baba")
 "baBA".match(inAny: cosas)
-"https://es.linkedin.com/in/sebastianvarelabasconi".isValidLinkedinProfileUrl()
+"https://es.linkedin.com/in/sebastianvarelabasconi".isValidLinkedInProfileUrl()
 "https://es.linkedin.com/in/sebastianvarelabasconi".linkedInUsername
 
+"http://google.com".isValidInternetUrl()
+"http://www.google.com".isValidInternetUrl()
+"naranja".isValidInternetUrl()
