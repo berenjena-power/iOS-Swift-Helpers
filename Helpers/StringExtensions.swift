@@ -75,6 +75,10 @@ public extension String {
         return substring(with: startIndex..<endIndex)
     }
     
+    public func match(inAny occurrences: [String]) -> Bool {
+        return occurrences.anyMatch(with: self)
+    }
+    
     public func isValidEmail() -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         
@@ -131,7 +135,7 @@ public extension Sequence where Iterator.Element == String {
     /**
      Find any occurences of given string in any part of every item. This func is CASE and ACCENT INSENSITIVE
      */
-    public func match(with occurrence: String) -> Bool {
+    public func anyMatch(with occurrence: String) -> Bool {
         return contains(where: { el in
             return occurrence.range(of: el, options: [.diacriticInsensitive, .caseInsensitive], range: nil, locale: nil) != nil
         })
