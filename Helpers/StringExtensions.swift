@@ -75,10 +75,6 @@ public extension String {
         return substring(with: startIndex..<endIndex)
     }
     
-    public func isMatched(by occurrences: [String]) -> Bool {
-        return occurrences.matchWith(occurrence: self)
-    }
-    
     public func isValidEmail() -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         
@@ -86,13 +82,56 @@ public extension String {
         return emailTest.evaluate(with: self)
     }
     
+    public func match(withPattern pattern: String) -> Bool {
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else {
+            return false
+        }
+        let range = NSRange(location: 0, length: characters.count)
+        return regex.firstMatch(in: self, options: [], range: range) != nil
+    }
+    
+    public func match(forPattern pattern: String, index: Int) -> String? {
+        let list = matches(forPattern: pattern)
+        if let el = list.element(atIndex: index) {
+            return el
+        }
+        return nil
+    }
+    
+    public func matches(forPattern pattern: String) -> [String] {
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else {
+            return []
+        }
+        
+        let nsString = self as NSString
+        let results = regex.matches(in: self, options: [], range: NSRange(location: 0, length: nsString.length))
+        if let result = results.first {
+            return (0..<result.numberOfRanges).map {
+                result.rangeAt($0).location != NSNotFound ? nsString.substring(with: result.rangeAt($0)) : ""
+            }
+        } else {
+            return []
+        }
+    }
+    
+    public func isValidLinkedinProfileUrl() -> Bool {
+        return match(withPattern: "^http[s]?://(linkedin.com|.+\\.linkedin.com)/in/(.*)$")
+    }
+    
+    public var linkedInUsername: String? {
+        return match(forPattern: "^http[s]?://(linkedin.com|.+\\.linkedin.com)/in/(.*)$", index: 2)
+    }
+    
     public var URLEscapedString: String {
-        return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed)!
+        return addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed)!
     }
 }
 
 public extension Sequence where Iterator.Element == String {
-    public func matchWith(occurrence: String) -> Bool {
+    /**
+     Find any occurences of given string in any part of every item. This func is CASE and ACCENT INSENSITIVE
+     */
+    public func match(with occurrence: String) -> Bool {
         return contains(where: { el in
             return occurrence.range(of: el, options: [.diacriticInsensitive, .caseInsensitive], range: nil, locale: nil) != nil
         })

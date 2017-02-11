@@ -15,6 +15,13 @@ public extension Array {
         return result
     }
     
+    public func element(atIndex index: Int) -> Element? {
+        if count > index {
+            return self[index]
+        }
+        return nil
+    }
+    
     public func find(_ includedElement: (Element) -> Bool) -> Int? {
         for (idx, element) in enumerated() {
             if includedElement(element) {
