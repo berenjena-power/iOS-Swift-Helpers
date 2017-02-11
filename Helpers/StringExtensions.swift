@@ -79,6 +79,13 @@ public extension String {
         return occurrences.anyMatch(with: self)
     }
     
+    public func isValidUrl() -> Bool {
+        if let _ = NSURL(string: self) {
+            return true
+        }
+        return false
+    }
+    
     public func isValidEmail() -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         
