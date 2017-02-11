@@ -118,16 +118,22 @@ public extension String {
         }
     }
     
-    public func isValidLinkedinProfileUrl() -> Bool {
-        return match(withPattern: "^http[s]?://(linkedin.com|.+\\.linkedin.com)/in/(.*)$")
+    public var URLEscapedString: String {
+        return addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed)!
+    }
+}
+
+public extension String {
+    public var linkedInPattern: String {
+        return "^http[s]?://(linkedin.com|.+\\.linkedin.com)/in/(.*)$"
+    }
+    
+    public func isValidLinkedInProfileUrl() -> Bool {
+        return match(withPattern: linkedInPattern)
     }
     
     public var linkedInUsername: String? {
-        return match(forPattern: "^http[s]?://(linkedin.com|.+\\.linkedin.com)/in/(.*)$", index: 2)
-    }
-    
-    public var URLEscapedString: String {
-        return addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed)!
+        return match(forPattern: linkedInPattern, index: 2)
     }
 }
 
