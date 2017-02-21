@@ -18,7 +18,7 @@ public class NetworkRequest {
             request.setValue(url.absoluteString, forHTTPHeaderField: "SOAPAction")
             request.setValue("\(message.length)", forHTTPHeaderField: "Content-Lenght")
             request.httpBody = message.data(using: .utf8)
-
+            
             request.httpMethod = Method.post.rawValue
             request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
             request.allHTTPHeaderFields = header as? [String: String]
@@ -28,11 +28,12 @@ public class NetworkRequest {
             let urlWithQueryParameters = queryString.isEmpty ? url : url.URLByAppendingQueryParameters(queryString)
             var request: URLRequest = URLRequest(url: urlWithQueryParameters)
             
-            if let data = try? JSONSerialization.data(withJSONObject: parameters, options: []) {
+            if parameters.isNotEmpty,
+                let data = try? JSONSerialization.data(withJSONObject: parameters, options: []) {
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 request.httpBody = data
             }
-
+            
             request.httpMethod = method.rawValue
             request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
             request.allHTTPHeaderFields = header as? [String: String]
