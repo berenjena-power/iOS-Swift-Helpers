@@ -79,7 +79,7 @@ public extension String {
         return occurrences.anyMatch(with: self)
     }
     
-    public func isValidInternetUrl() -> Bool {
+    public func isValidUrl() -> Bool {
         let regEx = "((https|http)://)((\\w|-)+)(([.]|[/])((\\w|-)+))+"
         let predicate = NSPredicate(format:"SELF MATCHES %@", argumentArray:[regEx])
         return predicate.evaluate(with: self)
