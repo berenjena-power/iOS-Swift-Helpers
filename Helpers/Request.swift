@@ -2,48 +2,42 @@ import Foundation
 
 public class NetworkRequest {
     let url: URL
-    let method: Method
-    var auth: Authentication
-    let queryStringParameters: [String: String]
-    let header: JSON
-    let soapMessage: String
-    let parameters: JSON
+    let requestType: RequestType
     
-    public init(url: URL, method: Method, auth: Authentication, queryStringParameters: [String: String], header: JSON, soapMessage: String = "", parameters: JSON = [:]) {
+    public init(url: URL, requestType: RequestType) {
         self.url = url
-        self.method = method
-        self.auth = auth
-        self.queryStringParameters = queryStringParameters
-        self.header = header
-        self.soapMessage = soapMessage
-        self.parameters = parameters
+        self.requestType = requestType
     }
     
     public var urlRequest: URLRequest {
-        let urlWithQueryParameters = queryStringParameters.isEmpty ?
-            url :
-            url.URLByAppendingQueryParameters(queryStringParameters)
-        var request: URLRequest = URLRequest(url: urlWithQueryParameters)
-        
-        if soapMessage.isNotEmpty {
+        switch requestType {
+        case let .soap(header, message):
+            var request: URLRequest = URLRequest(url: url)
+            
             request.setValue("text/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
-            request.setValue(urlWithQueryParameters.absoluteString, forHTTPHeaderField: "SOAPAction")
-            request.setValue("\(soapMessage.length)", forHTTPHeaderField: "Content-Lenght")
-            request.httpBody = soapMessage.data(using: .utf8)
-        }
-        
-        if parameters.isNotEmpty {
+            request.setValue(url.absoluteString, forHTTPHeaderField: "SOAPAction")
+            request.setValue("\(message.length)", forHTTPHeaderField: "Content-Lenght")
+            request.httpBody = message.data(using: .utf8)
+
+            request.httpMethod = Method.post.rawValue
+            request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+            request.allHTTPHeaderFields = header as? [String: String]
+            return request
+            
+        case let .rest(method, header, parameters, queryString):
+            let urlWithQueryParameters = queryString.isEmpty ? url : url.URLByAppendingQueryParameters(queryString)
+            var request: URLRequest = URLRequest(url: urlWithQueryParameters)
+            
             if let data = try? JSONSerialization.data(withJSONObject: parameters, options: []) {
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 request.httpBody = data
             }
+
+            request.httpMethod = method.rawValue
+            request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+            request.allHTTPHeaderFields = header as? [String: String]
+            return request
         }
-        
-        request.httpMethod = method.rawValue
-        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-        request.httpMethod = method.rawValue
-        request.allHTTPHeaderFields = header as? [String: String]
-        return request
     }
     
     public enum Method: String {
@@ -62,6 +56,11 @@ public class NetworkRequest {
         case array
         case object
         case none
+    }
+    
+    public enum RequestType {
+        case soap(header: JSON, message: String)
+        case rest(method: Method, header: JSON, parameters: JSON, queryString: [String: String])
     }
     
     public enum Authentication {
