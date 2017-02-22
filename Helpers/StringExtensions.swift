@@ -1,9 +1,11 @@
 import Foundation
 
 public extension String {
-    public func base64Encoded() -> String? {
-        let plainData = data(using: String.Encoding.utf8)
-        let base64String = plainData?.base64EncodedString(options: Data.Base64EncodingOptions.endLineWithCarriageReturn)
+    public func base64Encoded() -> String {
+        guard let plainData = data(using: .utf8) else {
+            fatalError("could not get data from string")
+        }
+        let base64String = plainData.base64EncodedString(options: Data.Base64EncodingOptions.endLineWithCarriageReturn)
         return base64String
     }
     
