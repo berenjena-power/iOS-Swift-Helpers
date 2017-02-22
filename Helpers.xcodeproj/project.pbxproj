@@ -31,6 +31,8 @@
 		F26E36B81DF0B8E600F96844 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E36B71DF0B8E600F96844 /* Time.swift */; };
 		F27DA41D1DA520D5005B1A33 /* Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = F27DA40F1DA520D5005B1A33 /* Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F27DA4271DA5282E005B1A33 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */; };
+		F29490931E5DC4360083A10D /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29490911E5DC4360083A10D /* CommonCrypto.framework */; };
+		F29490941E5DC4360083A10D /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29490921E5DC4360083A10D /* Crypto.framework */; };
 		F298CD1B1E2F792000964328 /* AnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298CD1A1E2F792000964328 /* AnimationDirection.swift */; };
 		F298CD361E2FA46000964328 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298CD351E2FA46000964328 /* UIApplicationExtensions.swift */; };
 		F29C4A5F1E2FC850008018E4 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C4A5E1E2FC850008018E4 /* JSON.swift */; };
@@ -72,6 +74,8 @@
 		F27DA40F1DA520D5005B1A33 /* Helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		F27DA4101DA520D5005B1A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
+		F29490911E5DC4360083A10D /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
+		F29490921E5DC4360083A10D /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
 		F298CD1A1E2F792000964328 /* AnimationDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDirection.swift; sourceTree = "<group>"; };
 		F298CD351E2FA46000964328 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		F29C4A5E1E2FC850008018E4 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 			files = (
 				F20F72A71E40ED9F003ADA2F /* EventKit.framework in Frameworks */,
 				F23CA0CC1DA69C1F006007EF /* UIKit.framework in Frameworks */,
+				F29490931E5DC4360083A10D /* CommonCrypto.framework in Frameworks */,
+				F29490941E5DC4360083A10D /* Crypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +146,8 @@
 		F23CA0CA1DA69C1F006007EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F29490911E5DC4360083A10D /* CommonCrypto.framework */,
+				F29490921E5DC4360083A10D /* Crypto.framework */,
 				F20F72A61E40ED9F003ADA2F /* EventKit.framework */,
 				F2E464EC1DB4EA3600602771 /* Logger.framework */,
 				F23CA0CB1DA69C1F006007EF /* UIKit.framework */,
@@ -455,6 +463,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Helpers/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -475,6 +487,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Helpers/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
