@@ -3,13 +3,13 @@ import Foundation
 public class NetworkRequest {
     let url: URL
     let requestType: RequestType
+    var urlRequest: URLRequest
     
     public init(url: URL, requestType: RequestType) {
         self.url = url
         self.requestType = requestType
-    }
-    
-    public var urlRequest: URLRequest {
+        
+        // Request
         switch requestType {
         case let .soap(header, message):
             var request: URLRequest = URLRequest(url: url)
@@ -22,7 +22,7 @@ public class NetworkRequest {
             request.httpMethod = Method.post.rawValue
             request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
             request.allHTTPHeaderFields = header as? [String: String]
-            return request
+            self.urlRequest = request
             
         case let .rest(method, header, parameters, queryString):
             let urlWithQueryParameters = queryString.isEmpty ? url : url.URLByAppendingQueryParameters(queryString)
@@ -37,8 +37,12 @@ public class NetworkRequest {
             request.httpMethod = method.rawValue
             request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
             request.allHTTPHeaderFields = header as? [String: String]
-            return request
+            self.urlRequest = request
         }
+    }
+    
+    public func add(headers: [String: String]) {
+        urlRequest.allHTTPHeaderFields?.update(other: headers)
     }
     
     public enum Method: String {
