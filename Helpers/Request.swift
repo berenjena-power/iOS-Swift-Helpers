@@ -1,9 +1,9 @@
 import Foundation
 
 public class NetworkRequest {
-    let url: URL
-    let requestType: RequestType
-    var urlRequest: URLRequest
+    public let url: URL
+    public let requestType: RequestType
+    public private(set)var urlRequest: URLRequest
     
     public init(url: URL, requestType: RequestType) {
         self.url = url
