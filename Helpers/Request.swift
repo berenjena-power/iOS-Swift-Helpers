@@ -64,6 +64,7 @@ public class NetworkRequest {
     
     public enum ContentType {
         case json(body: JSON)
+        case formURLEncoded(body: Form)
         case form(body: Form)
     }
     
@@ -89,8 +90,10 @@ extension NetworkRequest.ContentType {
         switch self {
         case .json:
             return "application/json"
-        case .form:
+        case .formURLEncoded:
             return "application/x-www-form-urlencoded"
+        case .form:
+            return "multipart/form-data"
         }
     }
     
@@ -102,12 +105,20 @@ extension NetworkRequest.ContentType {
             }
             
             return try? JSONSerialization.data(withJSONObject: parameters, options: [])
-        case let .form(form):
+            
+        case let .formURLEncoded(form):
             if form.isEmpty {
                 return nil
             }
             
             return form.map({ "\($0)=\($1)" }).joined(separator: "&").data(using: .utf8)
+            
+        case let .form(form):
+            if form.isEmpty {
+                return nil
+            }
+            
+            return MultiPartForm(form: form).body
         }
     }
 }
