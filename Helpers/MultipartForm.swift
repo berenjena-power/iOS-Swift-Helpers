@@ -4,9 +4,9 @@ struct MultiPartForm {
     let form: Form
     let boundary: String
     
-    init(form: Form, boundary: String = "Boundary-\(UUID().uuidString)") {
+    init(form: Form, boundary: String = UUID().uuidString) {
         self.form = form
-        self.boundary = boundary
+        self.boundary = boundary 
     }
     
     var body: Data {
