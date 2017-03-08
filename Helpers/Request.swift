@@ -1,15 +1,15 @@
 import Foundation
 
 public class NetworkRequest {
-    let url: URL
-    let requestType: RequestType
+    public let url: URL
+    public let requestType: RequestType
+    public private(set)var urlRequest: URLRequest
     
     public init(url: URL, requestType: RequestType) {
         self.url = url
         self.requestType = requestType
-    }
-    
-    public var urlRequest: URLRequest {
+        
+        // Request
         switch requestType {
         case let .soap(header, message):
             var request: URLRequest = URLRequest(url: url)
@@ -22,23 +22,26 @@ public class NetworkRequest {
             request.httpMethod = Method.post.rawValue
             request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
             request.allHTTPHeaderFields = header as? [String: String]
-            return request
+            self.urlRequest = request
             
-        case let .rest(method, header, parameters, queryString):
+        case let .rest(method, header, queryString, contentType):
             let urlWithQueryParameters = queryString.isEmpty ? url : url.URLByAppendingQueryParameters(queryString)
             var request: URLRequest = URLRequest(url: urlWithQueryParameters)
             
-            if parameters.isNotEmpty,
-                let data = try? JSONSerialization.data(withJSONObject: parameters, options: []) {
-                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-                request.httpBody = data
+            if let body = contentType.body {
+                request.setValue(contentType.httpHeaderValue, forHTTPHeaderField: "Content-Type")
+                request.httpBody = body
             }
             
             request.httpMethod = method.rawValue
             request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
             request.allHTTPHeaderFields = header as? [String: String]
-            return request
+            self.urlRequest = request
         }
+    }
+    
+    public func add(headers: [String: String]) {
+        urlRequest.allHTTPHeaderFields?.update(other: headers)
     }
     
     public enum Method: String {
@@ -59,9 +62,15 @@ public class NetworkRequest {
         case none
     }
     
+    public enum ContentType {
+        case json(body: JSON)
+        case formURLEncoded(body: Form)
+        case form(body: Form, boundary: String)
+    }
+    
     public enum RequestType {
         case soap(header: JSON, message: String)
-        case rest(method: Method, header: JSON, parameters: JSON, queryString: [String: String])
+        case rest(method: Method, header: JSON, queryString: [String: String], contentType: ContentType)
     }
     
     public enum Authentication {
@@ -71,5 +80,45 @@ public class NetworkRequest {
     public enum AuthenticationLevel {
         case userLevel
         case appLevel
+    }
+}
+
+public typealias Form = [String: String]
+
+extension NetworkRequest.ContentType {
+    public var httpHeaderValue: String {
+        switch self {
+        case .json:
+            return "application/json"
+        case .formURLEncoded:
+            return "application/x-www-form-urlencoded"
+        case let .form(_, boundary):
+            return "multipart/form-data; boundary=\(boundary)"
+        }
+    }
+    
+    public var body: Data? {
+        switch self {
+        case let .json(parameters):
+            if parameters.isEmpty {
+                return nil
+            }
+            
+            return try? JSONSerialization.data(withJSONObject: parameters, options: [])
+            
+        case let .formURLEncoded(form):
+            if form.isEmpty {
+                return nil
+            }
+            
+            return form.map({ "\($0)=\($1)" }).joined(separator: "&").data(using: .utf8)
+            
+        case let .form(form, boundary):
+            if form.isEmpty {
+                return nil
+            }
+            
+            return MultiPartForm(form: form, boundary: boundary).body
+        }
     }
 }
