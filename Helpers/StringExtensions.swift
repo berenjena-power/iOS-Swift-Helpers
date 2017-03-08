@@ -1,7 +1,7 @@
 import Foundation
 
 public extension String {
-    public func base64Encoded() -> String {
+    public var base64Encoded: String {
         guard let plainData = data(using: .utf8) else {
             fatalError("could not get data from string")
         }
@@ -9,7 +9,7 @@ public extension String {
         return base64String
     }
     
-    public func base64Decoded() -> String? {
+    public var base64Decoded: String? {
         guard let decodedData = Data(base64Encoded: self) else {
             return nil
         }
@@ -49,7 +49,7 @@ public extension String {
         return !self.isEmpty
     }
     
-    public func trim() -> String {
+    public var trimed: String {
         return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
     
