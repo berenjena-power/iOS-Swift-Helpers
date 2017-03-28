@@ -14,7 +14,7 @@ public extension String {
             return nil
         }
         let decodedString = NSString(data: decodedData as Data, encoding: String.Encoding.utf8.rawValue)
-        return decodedString as? String
+        return decodedString as String?
     }
     
     public func containsAnyCharacterOfSet(_ set: CharacterSet) -> Bool {
