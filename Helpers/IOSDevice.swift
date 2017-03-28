@@ -1,5 +1,3 @@
-import Crypto
-
 public protocol Device {
     var osName: String { get }
     var osVersion: String { get }
