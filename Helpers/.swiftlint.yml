@@ -18,9 +18,6 @@ opt_in_rules:
   - attributes
 included: 
   - Helpers
-excluded: 
-  - Carthage
-  - Pods
 
 force_cast: 
   severity: warning
