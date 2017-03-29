@@ -145,20 +145,6 @@ public extension String {
     }
 }
 
-//public extension String {
-//    public var md5: String? {
-//        return hashData?.md5.hex
-//    }
-//    
-//    public var sha256: String? {
-//        return hashData?.sha256.hex
-//    }
-//        
-//    private var hashData: Data? {
-//        return data(using: .utf8)
-//    }
-//}
-
 public extension Sequence where Iterator.Element == String {
     /**
      Find any occurences of given string in any part of every item. This func is CASE and ACCENT INSENSITIVE

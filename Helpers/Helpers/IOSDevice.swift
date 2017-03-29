@@ -1,3 +1,6 @@
+import UIKit
+import CryptoSwift
+
 public protocol Device {
     var osName: String { get }
     var osVersion: String { get }
@@ -31,15 +34,11 @@ public struct IOSDevice: Device {
     }
 
     public var footprint: String {
-        return identifierForVendor.base64Encoded
-//        guard let identifierForVendorSha256 = identifierForVendor.sha256,
-//              let modelSha256 = UIDevice.current.model.sha256, //Use current Model instead of fancy model.
-//              let systemNameSha256 = osName.sha256 else {
-//            fatalError("fail to get hashes")
-//        }
-//        guard let superHash = "\(identifierForVendorSha256)\(modelSha256)\(systemNameSha256)".sha256 else {
-//            fatalError("fail to get super hash")
-//        }
-//        return superHash.base64Encoded
+        let identifierForVendorSha256 = identifierForVendor.sha256()
+        let modelSha256 = UIDevice.current.model.sha256() //Use current Model instead of fancy model.
+        let systemNameSha256 = osName.sha256()
+        
+        let superHash = "\(identifierForVendorSha256)\(modelSha256)\(systemNameSha256)".sha256()
+        return superHash.base64Encoded
     }
 }

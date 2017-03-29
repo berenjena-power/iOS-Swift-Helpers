@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 public extension UITableViewCell {
     public static var nibName: String {

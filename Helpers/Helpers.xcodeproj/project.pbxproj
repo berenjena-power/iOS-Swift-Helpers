@@ -41,7 +41,7 @@
 		F29DB5621E41FCF40090FFB9 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29DB5611E41FCF40090FFB9 /* Value.swift */; };
 		F2A5C10D1E1F02790089EFCF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */; };
 		F2A5C1131E1F04930089EFCF /* PausableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C1121E1F04930089EFCF /* PausableTimer.swift */; };
-		F2A970F81E8AC8FA00802D9C /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A970F71E8AC8FA00802D9C /* DataExtensions.swift */; };
+		F2C76FBD1E8C174400B7B7DA /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C76FBC1E8C174400B7B7DA /* CryptoSwift.framework */; };
 		F2E465011DB4FE3500602771 /* UIPlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */; };
 		F2E465031DB5052A00602771 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465021DB5052A00602771 /* CGFloatExtensions.swift */; };
 		F2EEDEDA1DB91BFA00314944 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EEDED91DB91BFA00314944 /* ArrayExtensions.swift */; };
@@ -84,7 +84,7 @@
 		F29DB5611E41FCF40090FFB9 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		F2A5C1121E1F04930089EFCF /* PausableTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausableTimer.swift; sourceTree = "<group>"; };
-		F2A970F71E8AC8FA00802D9C /* DataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		F2C76FBC1E8C174400B7B7DA /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = ../Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPlaceHolderTextView.swift; sourceTree = "<group>"; };
 		F2E465021DB5052A00602771 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
 		F2EEDED91DB91BFA00314944 /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
@@ -97,6 +97,7 @@
 			files = (
 				F20F72A71E40ED9F003ADA2F /* EventKit.framework in Frameworks */,
 				F23CA0CC1DA69C1F006007EF /* UIKit.framework in Frameworks */,
+				F2C76FBD1E8C174400B7B7DA /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +120,6 @@
 				F2E465021DB5052A00602771 /* CGFloatExtensions.swift */,
 				F25954451DAFD9ED00BDA046 /* CFStringExtensions.swift */,
 				F23CA1081DA81BDE006007EF /* StringExtensions.swift */,
-				F2A970F71E8AC8FA00802D9C /* DataExtensions.swift */,
 				F224D6C21DB23C9900CBC4FF /* BundleExtensions.swift */,
 				F2EEDED91DB91BFA00314944 /* ArrayExtensions.swift */,
 				F20667C41E23DD600075DC32 /* CollectionExtensions.swift */,
@@ -146,6 +146,7 @@
 		F23CA0CA1DA69C1F006007EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2C76FBC1E8C174400B7B7DA /* CryptoSwift.framework */,
 				F20F72A61E40ED9F003ADA2F /* EventKit.framework */,
 				F23CA0CB1DA69C1F006007EF /* UIKit.framework */,
 			);
@@ -330,7 +331,6 @@
 				F231E0B51DE6F886004AEBD0 /* DateExtensions.swift in Sources */,
 				F2A5C1131E1F04930089EFCF /* PausableTimer.swift in Sources */,
 				F224D6C91DB2406500CBC4FF /* IOSDevice.swift in Sources */,
-				F2A970F81E8AC8FA00802D9C /* DataExtensions.swift in Sources */,
 				F231E0B91DE6FA94004AEBD0 /* IntExtensions.swift in Sources */,
 				F231E0BE1DE713ED004AEBD0 /* Utils.swift in Sources */,
 				F29DB5601E41FCB10090FFB9 /* Encodable.swift in Sources */,
@@ -465,7 +465,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(SRCROOT)/../Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Helpers/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -489,7 +489,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(SRCROOT)/../Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Helpers/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

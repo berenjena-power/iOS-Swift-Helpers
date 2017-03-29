@@ -12,18 +12,21 @@
 		F2C76F961E8BD61900B7B7DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C76F941E8BD61900B7B7DA /* Main.storyboard */; };
 		F2C76F981E8BD61900B7B7DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C76F971E8BD61900B7B7DA /* Assets.xcassets */; };
 		F2C76F9B1E8BD61900B7B7DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C76F991E8BD61900B7B7DA /* LaunchScreen.storyboard */; };
-		F2C76FB01E8BD74400B7B7DA /* Helpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C76FAF1E8BD74400B7B7DA /* Helpers.framework */; };
-		F2C76FB11E8BD74400B7B7DA /* Helpers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2C76FAF1E8BD74400B7B7DA /* Helpers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2C76FC21E8C1AB000B7B7DA /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C76FC11E8C1AB000B7B7DA /* CryptoSwift.framework */; };
+		F2C76FC31E8C1AB000B7B7DA /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2C76FC11E8C1AB000B7B7DA /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2C76FC61E8C1B6700B7B7DA /* Helpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C76FC51E8C1B6700B7B7DA /* Helpers.framework */; };
+		F2C76FC71E8C1B6700B7B7DA /* Helpers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2C76FC51E8C1B6700B7B7DA /* Helpers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F2C76FAE1E8BD73C00B7B7DA /* Embed Frameworks */ = {
+		F2C76FC41E8C1AB000B7B7DA /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F2C76FB11E8BD74400B7B7DA /* Helpers.framework in Embed Frameworks */,
+				F2C76FC71E8C1B6700B7B7DA /* Helpers.framework in Embed Frameworks */,
+				F2C76FC31E8C1AB000B7B7DA /* CryptoSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +41,8 @@
 		F2C76F971E8BD61900B7B7DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2C76F9A1E8BD61900B7B7DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2C76F9C1E8BD61900B7B7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2C76FAF1E8BD74400B7B7DA /* Helpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Helpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2C76FC11E8C1AB000B7B7DA /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = ../Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
+		F2C76FC51E8C1B6700B7B7DA /* Helpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Helpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2C76FB01E8BD74400B7B7DA /* Helpers.framework in Frameworks */,
+				F2C76FC61E8C1B6700B7B7DA /* Helpers.framework in Frameworks */,
+				F2C76FC21E8C1AB000B7B7DA /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +91,8 @@
 		F2C76FAA1E8BD6C300B7B7DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F2C76FAF1E8BD74400B7B7DA /* Helpers.framework */,
+				F2C76FC51E8C1B6700B7B7DA /* Helpers.framework */,
+				F2C76FC11E8C1AB000B7B7DA /* CryptoSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,7 +107,7 @@
 				F2C76F891E8BD61900B7B7DA /* Sources */,
 				F2C76F8A1E8BD61900B7B7DA /* Frameworks */,
 				F2C76F8B1E8BD61900B7B7DA /* Resources */,
-				F2C76FAE1E8BD73C00B7B7DA /* Embed Frameworks */,
+				F2C76FC41E8C1AB000B7B7DA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sebastianvarela.TestApp;
@@ -300,6 +307,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sebastianvarela.TestApp;
@@ -327,6 +335,7 @@
 				F2C76FA11E8BD61900B7B7DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

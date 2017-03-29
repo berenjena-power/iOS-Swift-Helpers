@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 public extension UIApplication {
     public var statusBarView: UIView {
