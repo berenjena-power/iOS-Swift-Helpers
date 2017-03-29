@@ -76,8 +76,6 @@
 		F27DA4101DA520D5005B1A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
 		F280EF881E76FE4F00485EAB /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
-		F29490911E5DC4360083A10D /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
-		F29490921E5DC4360083A10D /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
 		F298CD1A1E2F792000964328 /* AnimationDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDirection.swift; sourceTree = "<group>"; };
 		F298CD351E2FA46000964328 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		F29C4A5E1E2FC850008018E4 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 		F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		F2A5C1121E1F04930089EFCF /* PausableTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausableTimer.swift; sourceTree = "<group>"; };
 		F2A970F71E8AC8FA00802D9C /* DataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
-		F2E464EC1DB4EA3600602771 /* Logger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logger.framework; path = "../Logger/build/Debug-iphoneos/Logger.framework"; sourceTree = "<group>"; };
 		F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPlaceHolderTextView.swift; sourceTree = "<group>"; };
 		F2E465021DB5052A00602771 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
 		F2EEDED91DB91BFA00314944 /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
@@ -149,10 +146,7 @@
 		F23CA0CA1DA69C1F006007EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F29490911E5DC4360083A10D /* CommonCrypto.framework */,
-				F29490921E5DC4360083A10D /* Crypto.framework */,
 				F20F72A61E40ED9F003ADA2F /* EventKit.framework */,
-				F2E464EC1DB4EA3600602771 /* Logger.framework */,
 				F23CA0CB1DA69C1F006007EF /* UIKit.framework */,
 			);
 			name = Frameworks;
