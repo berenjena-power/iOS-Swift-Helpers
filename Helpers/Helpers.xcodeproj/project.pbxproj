@@ -42,6 +42,10 @@
 		F2A5C10D1E1F02790089EFCF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */; };
 		F2A5C1131E1F04930089EFCF /* PausableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C1121E1F04930089EFCF /* PausableTimer.swift */; };
 		F2C76FBD1E8C174400B7B7DA /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C76FBC1E8C174400B7B7DA /* CryptoSwift.framework */; };
+		F2C76FF21E9530AE00B7B7DA /* DecimalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C76FF11E9530AE00B7B7DA /* DecimalExtensions.swift */; };
+		F2C76FF41E95358F00B7B7DA /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C76FF31E95358F00B7B7DA /* DoubleExtensions.swift */; };
+		F2C76FF61E95365200B7B7DA /* NSNumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C76FF51E95365200B7B7DA /* NSNumberExtensions.swift */; };
+		F2C76FF81E9538CB00B7B7DA /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C76FF71E9538CB00B7B7DA /* TimeIntervalExtensions.swift */; };
 		F2E465011DB4FE3500602771 /* UIPlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */; };
 		F2E465031DB5052A00602771 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465021DB5052A00602771 /* CGFloatExtensions.swift */; };
 		F2EEDEDA1DB91BFA00314944 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EEDED91DB91BFA00314944 /* ArrayExtensions.swift */; };
@@ -85,6 +89,10 @@
 		F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		F2A5C1121E1F04930089EFCF /* PausableTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausableTimer.swift; sourceTree = "<group>"; };
 		F2C76FBC1E8C174400B7B7DA /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = ../Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
+		F2C76FF11E9530AE00B7B7DA /* DecimalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalExtensions.swift; sourceTree = "<group>"; };
+		F2C76FF31E95358F00B7B7DA /* DoubleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
+		F2C76FF51E95365200B7B7DA /* NSNumberExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberExtensions.swift; sourceTree = "<group>"; };
+		F2C76FF71E9538CB00B7B7DA /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPlaceHolderTextView.swift; sourceTree = "<group>"; };
 		F2E465021DB5052A00602771 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
 		F2EEDED91DB91BFA00314944 /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
@@ -126,9 +134,13 @@
 				F231E0B41DE6F886004AEBD0 /* DateExtensions.swift */,
 				F231E0B61DE6F961004AEBD0 /* BoolExtensions.swift */,
 				F231E0B81DE6FA94004AEBD0 /* IntExtensions.swift */,
+				F2C76FF11E9530AE00B7B7DA /* DecimalExtensions.swift */,
 				F21734391E3E047B00F1EEAA /* URLExtensions.swift */,
 				F20F72A41E40EB94003ADA2F /* EKParticipantExtensions.swift */,
 				6CC4E42C1E5E4C1B000BD798 /* Dictionary.swift */,
+				F2C76FF31E95358F00B7B7DA /* DoubleExtensions.swift */,
+				F2C76FF51E95365200B7B7DA /* NSNumberExtensions.swift */,
+				F2C76FF71E9538CB00B7B7DA /* TimeIntervalExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -317,12 +329,14 @@
 				6CC4E42D1E5E4C1B000BD798 /* Dictionary.swift in Sources */,
 				F20F72A51E40EB94003ADA2F /* EKParticipantExtensions.swift in Sources */,
 				F26E36B81DF0B8E600F96844 /* Time.swift in Sources */,
+				F2C76FF41E95358F00B7B7DA /* DoubleExtensions.swift in Sources */,
 				F231E0BB1DE6FAC7004AEBD0 /* UIViewControllerExtensions.swift in Sources */,
 				F23CA1091DA81BDE006007EF /* StringExtensions.swift in Sources */,
 				F23CA0D11DA69DCD006007EF /* CGColorExtensions.swift in Sources */,
 				F29C4A611E2FC881008018E4 /* Decodable.swift in Sources */,
 				F2E465031DB5052A00602771 /* CGFloatExtensions.swift in Sources */,
 				F29C4A5F1E2FC850008018E4 /* JSON.swift in Sources */,
+				F2C76FF21E9530AE00B7B7DA /* DecimalExtensions.swift in Sources */,
 				F2A5C10D1E1F02790089EFCF /* UIViewExtensions.swift in Sources */,
 				F25954461DAFD9ED00BDA046 /* CFStringExtensions.swift in Sources */,
 				F27DA4271DA5282E005B1A33 /* UIDeviceExtensions.swift in Sources */,
@@ -337,12 +351,14 @@
 				6C986E0C1E62FC7A00C254B4 /* MultipartForm.swift in Sources */,
 				F224D6C31DB23C9900CBC4FF /* BundleExtensions.swift in Sources */,
 				F280EF891E76FE4F00485EAB /* UITableViewExtensions.swift in Sources */,
+				F2C76FF61E95365200B7B7DA /* NSNumberExtensions.swift in Sources */,
 				F29DB5621E41FCF40090FFB9 /* Value.swift in Sources */,
 				F2E465011DB4FE3500602771 /* UIPlaceHolderTextView.swift in Sources */,
 				F217343A1E3E047B00F1EEAA /* URLExtensions.swift in Sources */,
 				F298CD361E2FA46000964328 /* UIApplicationExtensions.swift in Sources */,
 				733D62631DA54F91000DB0E4 /* UIImageViewExtensions.swift in Sources */,
 				F231E0B71DE6F961004AEBD0 /* BoolExtensions.swift in Sources */,
+				F2C76FF81E9538CB00B7B7DA /* TimeIntervalExtensions.swift in Sources */,
 				F20667C51E23DD600075DC32 /* CollectionExtensions.swift in Sources */,
 				F217343C1E3E0CFF00F1EEAA /* Request.swift in Sources */,
 				733D62611DA54D79000DB0E4 /* UIImageExtensions.swift in Sources */,

@@ -1,6 +1,22 @@
 import Foundation
 
 public extension Date {
+    public var firstDayOfCurrentMonth: Date {
+        return (Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: self)))!.dateByAdding(hours: 1)
+    }
+    
+    public var isFirstDayOfCurrentMonth: Bool {
+        return self == firstDayOfCurrentMonth
+    }
+    
+    public var firstHourOfCurrentDate: Date {
+        return (Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: self)))!
+    }
+    
+    public var lastDayOfCurrentMonth: Date {
+        return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: firstDayOfCurrentMonth)!
+    }
+
     public var year: Int {
         let calendar = Calendar.current
         return calendar.component(.year, from: self)
@@ -76,6 +92,14 @@ public extension Date {
         return converted
     }
 
+    public func toFormattedPOSIXDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        return formatter.string(from:self)
+    }
+    
     public func dateByAdding(years: Int) -> Date {
         let components = DateComponents(year: years)
         return Calendar.current.date(byAdding: components, to: self)!
@@ -91,7 +115,21 @@ public extension Date {
         return Calendar.current.date(byAdding: components, to: self)!
     }
     
-    var localTime: Time {
+    public func dateByAdding(hours: Int) -> Date {
+        let components = DateComponents(minute: minute)
+        return Calendar.current.date(byAdding: components, to: self)!
+    }
+
+    public func dateByAdding(minutes: Int) -> Date {
+        let components = DateComponents(minute: minute)
+        return Calendar.current.date(byAdding: components, to: self)!
+    }
+    
+    public func months(from date: Date) -> Int {
+        return (Calendar.current.dateComponents([.month], from: date, to: self).month ?? 0 ) + 1
+    }
+    
+    public var localTime: Time {
         let timef = DateFormatter()
         timef.dateFormat = "HH:mm:ss"
         
