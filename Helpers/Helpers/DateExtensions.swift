@@ -2,7 +2,7 @@ import Foundation
 
 public extension Date {
     public var firstDayOfCurrentMonth: Date {
-        return (Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: self)))!.dateByAdding(hours: 1)
+        return (Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: self)))!
     }
     
     public var isFirstDayOfCurrentMonth: Bool {
