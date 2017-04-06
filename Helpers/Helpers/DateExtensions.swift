@@ -126,7 +126,11 @@ public extension Date {
     }
     
     public func months(from date: Date) -> Int {
-        return (Calendar.current.dateComponents([.month], from: date, to: self).month ?? 0 ) + 1
+        return Calendar.current.dateComponents([.month], from: date.firstDayOfCurrentMonth, to: self.firstDayOfCurrentMonth).month ?? 0
+    }
+    
+    public func totalAbsoluteMonths(from date: Date) -> Int {
+        return self.months(from: date) + 1
     }
     
     public var localTime: Time {
