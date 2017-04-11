@@ -130,7 +130,8 @@
 				TargetAttributes = {
 					F2C76F8C1E8BD61900B7B7DA = {
 						CreatedOnToolsVersion = 8.3;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = JFX6PVNK48;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -294,11 +295,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JFX6PVNK48;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sebastianvarela.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "58a2c104-3fb5-4ce6-8be5-d81875717d27";
+				PROVISIONING_PROFILE_SPECIFIER = WildCardDebug;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -307,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
