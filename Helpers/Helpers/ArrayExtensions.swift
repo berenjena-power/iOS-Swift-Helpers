@@ -54,6 +54,18 @@ public extension Array {
         return result
     }
     
+    public func mapSkipNils<U>(_ transform: (Element) -> U?) -> [U] {
+        var result: [U] = []
+        
+        for elem in self {
+            if let mapped = transform(elem) {
+                result.append(mapped)
+            }
+        }
+        
+        return result
+    }
+    
     public func element(atIndex index: Int) -> Element? {
         if count > index {
             return self[index]
