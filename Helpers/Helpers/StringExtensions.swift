@@ -150,8 +150,8 @@ public extension Sequence where Iterator.Element == String {
      Find any occurences of given string in any part of every item. This func is CASE and ACCENT INSENSITIVE
      */
     public func anyMatch(with occurrence: String) -> Bool {
-        return contains(where: { el in
-            return occurrence.range(of: el, options: [.diacriticInsensitive, .caseInsensitive], range: nil, locale: nil) != nil
+        return contains(where: { element in
+            return occurrence.range(of: element, options: [.diacriticInsensitive, .caseInsensitive], range: nil, locale: nil) != nil
         })
     }
 }

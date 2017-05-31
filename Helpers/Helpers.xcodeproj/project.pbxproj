@@ -39,6 +39,9 @@
 		F29DB5621E41FCF40090FFB9 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29DB5611E41FCF40090FFB9 /* Value.swift */; };
 		F2A5C10D1E1F02790089EFCF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */; };
 		F2A5C1131E1F04930089EFCF /* PausableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C1121E1F04930089EFCF /* PausableTimer.swift */; };
+		F2AE4EC91EDEDF9A00AA4584 /* MultipartForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AE4EC81EDEDF9A00AA4584 /* MultipartForm.swift */; };
+		F2AE4ECB1EDEDFBD00AA4584 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AE4ECA1EDEDFBD00AA4584 /* NetworkRequest.swift */; };
+		F2AE4ECD1EDEDFCE00AA4584 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AE4ECC1EDEDFCE00AA4584 /* Form.swift */; };
 		F2C76FBD1E8C174400B7B7DA /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C76FBC1E8C174400B7B7DA /* CryptoSwift.framework */; };
 		F2C76FF21E9530AE00B7B7DA /* DecimalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C76FF11E9530AE00B7B7DA /* DecimalExtensions.swift */; };
 		F2C76FF41E95358F00B7B7DA /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C76FF31E95358F00B7B7DA /* DoubleExtensions.swift */; };
@@ -84,6 +87,9 @@
 		F29DB5611E41FCF40090FFB9 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		F2A5C1121E1F04930089EFCF /* PausableTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausableTimer.swift; sourceTree = "<group>"; };
+		F2AE4EC81EDEDF9A00AA4584 /* MultipartForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartForm.swift; sourceTree = "<group>"; };
+		F2AE4ECA1EDEDFBD00AA4584 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		F2AE4ECC1EDEDFCE00AA4584 /* Form.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		F2C76FBC1E8C174400B7B7DA /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = ../Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		F2C76FF11E9530AE00B7B7DA /* DecimalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalExtensions.swift; sourceTree = "<group>"; };
 		F2C76FF31E95358F00B7B7DA /* DoubleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
@@ -205,9 +211,12 @@
 			isa = PBXGroup;
 			children = (
 				F29C4A5E1E2FC850008018E4 /* JSON.swift */,
+				F2AE4ECC1EDEDFCE00AA4584 /* Form.swift */,
 				F29C4A601E2FC881008018E4 /* Decodable.swift */,
 				F29DB55F1E41FCB10090FFB9 /* Encodable.swift */,
 				F29DB5611E41FCF40090FFB9 /* Value.swift */,
+				F2AE4EC81EDEDF9A00AA4584 /* MultipartForm.swift */,
+				F2AE4ECA1EDEDFBD00AA4584 /* NetworkRequest.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -329,6 +338,8 @@
 				F23CA0D11DA69DCD006007EF /* CGColorExtensions.swift in Sources */,
 				F29C4A611E2FC881008018E4 /* Decodable.swift in Sources */,
 				F2E465031DB5052A00602771 /* CGFloatExtensions.swift in Sources */,
+				F2AE4ECB1EDEDFBD00AA4584 /* NetworkRequest.swift in Sources */,
+				F2AE4EC91EDEDF9A00AA4584 /* MultipartForm.swift in Sources */,
 				F29C4A5F1E2FC850008018E4 /* JSON.swift in Sources */,
 				F2C76FF21E9530AE00B7B7DA /* DecimalExtensions.swift in Sources */,
 				F2A5C10D1E1F02790089EFCF /* UIViewExtensions.swift in Sources */,
@@ -352,6 +363,7 @@
 				733D62631DA54F91000DB0E4 /* UIImageViewExtensions.swift in Sources */,
 				F231E0B71DE6F961004AEBD0 /* BoolExtensions.swift in Sources */,
 				F2C76FF81E9538CB00B7B7DA /* TimeIntervalExtensions.swift in Sources */,
+				F2AE4ECD1EDEDFCE00AA4584 /* Form.swift in Sources */,
 				F20667C51E23DD600075DC32 /* CollectionExtensions.swift in Sources */,
 				733D62611DA54D79000DB0E4 /* UIImageExtensions.swift in Sources */,
 				F23CA0C91DA69B65006007EF /* UIColorExtensions.swift in Sources */,
