@@ -28,6 +28,7 @@
 		F23CA1091DA81BDE006007EF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CA1081DA81BDE006007EF /* StringExtensions.swift */; };
 		F25954461DAFD9ED00BDA046 /* CFStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25954451DAFD9ED00BDA046 /* CFStringExtensions.swift */; };
 		F26E36B81DF0B8E600F96844 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E36B71DF0B8E600F96844 /* Time.swift */; };
+		F275F1D51F386B2E00E4F05D /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F275F1D41F386B2E00E4F05D /* OptionalExtensions.swift */; };
 		F27DA41D1DA520D5005B1A33 /* Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = F27DA40F1DA520D5005B1A33 /* Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F27DA4271DA5282E005B1A33 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */; };
 		F280EF891E76FE4F00485EAB /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F280EF881E76FE4F00485EAB /* UITableViewExtensions.swift */; };
@@ -74,6 +75,7 @@
 		F23CA1081DA81BDE006007EF /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		F25954451DAFD9ED00BDA046 /* CFStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFStringExtensions.swift; sourceTree = "<group>"; };
 		F26E36B71DF0B8E600F96844 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		F275F1D41F386B2E00E4F05D /* OptionalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
 		F27DA40C1DA520D5005B1A33 /* Helpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Helpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27DA40F1DA520D5005B1A33 /* Helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		F27DA4101DA520D5005B1A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				F2C76FF31E95358F00B7B7DA /* DoubleExtensions.swift */,
 				F2C76FF51E95365200B7B7DA /* NSNumberExtensions.swift */,
 				F2C76FF71E9538CB00B7B7DA /* TimeIntervalExtensions.swift */,
+				F275F1D41F386B2E00E4F05D /* OptionalExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				F217343A1E3E047B00F1EEAA /* URLExtensions.swift in Sources */,
 				F298CD361E2FA46000964328 /* UIApplicationExtensions.swift in Sources */,
 				733D62631DA54F91000DB0E4 /* UIImageViewExtensions.swift in Sources */,
+				F275F1D51F386B2E00E4F05D /* OptionalExtensions.swift in Sources */,
 				F231E0B71DE6F961004AEBD0 /* BoolExtensions.swift in Sources */,
 				F2C76FF81E9538CB00B7B7DA /* TimeIntervalExtensions.swift in Sources */,
 				F2AE4ECD1EDEDFCE00AA4584 /* Form.swift in Sources */,
