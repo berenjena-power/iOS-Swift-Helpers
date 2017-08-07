@@ -1,7 +1,7 @@
 import Foundation
 
-extension Optional {
-    var isNil: Bool {
+public extension Optional {
+    public var isNil: Bool {
         return self == nil
     }
 }
