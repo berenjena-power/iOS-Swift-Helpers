@@ -32,6 +32,7 @@
 		F27DA41D1DA520D5005B1A33 /* Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = F27DA40F1DA520D5005B1A33 /* Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F27DA4271DA5282E005B1A33 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */; };
 		F280EF891E76FE4F00485EAB /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F280EF881E76FE4F00485EAB /* UITableViewExtensions.swift */; };
+		F29493B31F39F871003470D1 /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29493B21F39F871003470D1 /* UITextFieldExtensions.swift */; };
 		F298CD1B1E2F792000964328 /* AnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298CD1A1E2F792000964328 /* AnimationDirection.swift */; };
 		F298CD361E2FA46000964328 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298CD351E2FA46000964328 /* UIApplicationExtensions.swift */; };
 		F29C4A5F1E2FC850008018E4 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C4A5E1E2FC850008018E4 /* JSON.swift */; };
@@ -81,6 +82,7 @@
 		F27DA4101DA520D5005B1A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
 		F280EF881E76FE4F00485EAB /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		F29493B21F39F871003470D1 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
 		F298CD1A1E2F792000964328 /* AnimationDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDirection.swift; sourceTree = "<group>"; };
 		F298CD351E2FA46000964328 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		F29C4A5E1E2FC850008018E4 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				F298CD351E2FA46000964328 /* UIApplicationExtensions.swift */,
 				F27DA4261DA5282E005B1A33 /* UIDeviceExtensions.swift */,
+				F29493B21F39F871003470D1 /* UITextFieldExtensions.swift */,
 				733D62601DA54D79000DB0E4 /* UIImageExtensions.swift */,
 				733D62621DA54F91000DB0E4 /* UIImageViewExtensions.swift */,
 				F23CA0C81DA69B65006007EF /* UIColorExtensions.swift */,
@@ -350,6 +353,7 @@
 				F27DA4271DA5282E005B1A33 /* UIDeviceExtensions.swift in Sources */,
 				F298CD1B1E2F792000964328 /* AnimationDirection.swift in Sources */,
 				806133D41DABE4E400334A7A /* UITableViewCellExtensions.swift in Sources */,
+				F29493B31F39F871003470D1 /* UITextFieldExtensions.swift in Sources */,
 				F231E0B51DE6F886004AEBD0 /* DateExtensions.swift in Sources */,
 				F2A5C1131E1F04930089EFCF /* PausableTimer.swift in Sources */,
 				F224D6C91DB2406500CBC4FF /* IOSDevice.swift in Sources */,
