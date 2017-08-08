@@ -47,7 +47,6 @@
 		F2C76FBD1E8C174400B7B7DA /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C76FBC1E8C174400B7B7DA /* CryptoSwift.framework */; };
 		F2C76FF21E9530AE00B7B7DA /* DecimalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C76FF11E9530AE00B7B7DA /* DecimalExtensions.swift */; };
 		F2C76FF41E95358F00B7B7DA /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C76FF31E95358F00B7B7DA /* DoubleExtensions.swift */; };
-		F2C76FF61E95365200B7B7DA /* NSNumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C76FF51E95365200B7B7DA /* NSNumberExtensions.swift */; };
 		F2C76FF81E9538CB00B7B7DA /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C76FF71E9538CB00B7B7DA /* TimeIntervalExtensions.swift */; };
 		F2E465011DB4FE3500602771 /* UIPlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */; };
 		F2E465031DB5052A00602771 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465021DB5052A00602771 /* CGFloatExtensions.swift */; };
@@ -97,7 +96,6 @@
 		F2C76FBC1E8C174400B7B7DA /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = ../Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		F2C76FF11E9530AE00B7B7DA /* DecimalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalExtensions.swift; sourceTree = "<group>"; };
 		F2C76FF31E95358F00B7B7DA /* DoubleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
-		F2C76FF51E95365200B7B7DA /* NSNumberExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberExtensions.swift; sourceTree = "<group>"; };
 		F2C76FF71E9538CB00B7B7DA /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPlaceHolderTextView.swift; sourceTree = "<group>"; };
 		F2E465021DB5052A00602771 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 				F20F72A41E40EB94003ADA2F /* EKParticipantExtensions.swift */,
 				6CC4E42C1E5E4C1B000BD798 /* Dictionary.swift */,
 				F2C76FF31E95358F00B7B7DA /* DoubleExtensions.swift */,
-				F2C76FF51E95365200B7B7DA /* NSNumberExtensions.swift */,
 				F2C76FF71E9538CB00B7B7DA /* TimeIntervalExtensions.swift */,
 				F275F1D41F386B2E00E4F05D /* OptionalExtensions.swift */,
 			);
@@ -275,12 +272,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Sebastián Varela";
 				TargetAttributes = {
 					F27DA40B1DA520D5005B1A33 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -362,7 +359,6 @@
 				F29DB5601E41FCB10090FFB9 /* Encodable.swift in Sources */,
 				F224D6C31DB23C9900CBC4FF /* BundleExtensions.swift in Sources */,
 				F280EF891E76FE4F00485EAB /* UITableViewExtensions.swift in Sources */,
-				F2C76FF61E95365200B7B7DA /* NSNumberExtensions.swift in Sources */,
 				F29DB5621E41FCF40090FFB9 /* Value.swift in Sources */,
 				F2E465011DB4FE3500602771 /* UIPlaceHolderTextView.swift in Sources */,
 				F217343A1E3E047B00F1EEAA /* URLExtensions.swift in Sources */,
@@ -390,7 +386,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -398,7 +396,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -444,7 +446,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -452,7 +456,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -502,7 +510,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -525,7 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ciber-es.utils.Helpers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

@@ -52,31 +52,7 @@ public extension String {
     public var trimed: String {
         return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
-    
-    public var length: Int {
-        return characters.count
-    }
-    
-    public func index(from: Int) -> Index {
-        return self.index(startIndex, offsetBy: from)
-    }
-    
-    public func substring(from: Int) -> String {
-        let fromIndex = index(from: from)
-        return substring(from: fromIndex)
-    }
-    
-    public func substring(to: Int) -> String {
-        let toIndex = index(from: to)
-        return substring(to: toIndex)
-    }
-    
-    public func substring(with range: Range<Int>) -> String {
-        let startIndex = index(from: range.lowerBound)
-        let endIndex = index(from: range.upperBound)
-        return substring(with: startIndex..<endIndex)
-    }
-    
+
     public func match(inAny occurrences: [String]) -> Bool {
         return occurrences.anyMatch(with: self)
     }
@@ -119,7 +95,7 @@ public extension String {
         let results = regex.matches(in: self, options: [], range: NSRange(location: 0, length: nsString.length))
         if let result = results.first {
             return (0..<result.numberOfRanges).map {
-                result.rangeAt($0).location != NSNotFound ? nsString.substring(with: result.rangeAt($0)) : ""
+                result.range(at: $0).location != NSNotFound ? nsString.substring(with: result.range(at: $0)) : ""
             }
         } else {
             return []

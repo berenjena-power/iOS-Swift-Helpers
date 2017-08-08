@@ -14,7 +14,7 @@ public extension TimeInterval {
             i += 1
         }
         let index = final.index(final.startIndex, offsetBy: 3)
-        final = "\(Int(whole))" + final.substring(to: index)
+        final = "\(Int(whole))" + final[...index]
         return Int(final)!
     }
 }

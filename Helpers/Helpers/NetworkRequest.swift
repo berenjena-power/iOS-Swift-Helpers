@@ -16,7 +16,7 @@ public class NetworkRequest {
             
             request.setValue("text/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
             request.setValue(url.absoluteString, forHTTPHeaderField: "SOAPAction")
-            request.setValue("\(message.length)", forHTTPHeaderField: "Content-Lenght")
+            request.setValue("\(message.count)", forHTTPHeaderField: "Content-Lenght")
             request.httpBody = message.data(using: .utf8)
             
             request.httpMethod = Method.post.rawValue
