@@ -25,7 +25,7 @@ public class NetworkRequest {
             self.urlRequest = request
             
         case let .rest(method, header, queryString, contentType):
-            let urlWithQueryParameters = queryString.isEmpty ? url : url.URLByAppendingQueryParameters(queryString)
+            let urlWithQueryParameters = queryString.isEmpty ? url : url.appendingQueryParameters(queryString)
             var request: URLRequest = URLRequest(url: urlWithQueryParameters)
             
             if let body = contentType.body {
