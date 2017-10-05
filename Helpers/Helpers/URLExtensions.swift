@@ -1,7 +1,11 @@
 import Foundation
 
 public extension URL {
-    public func URLByAppendingQueryParameters(_ parameters: [String: String]?) -> URL {
+    public func starts(with url: URL) -> Bool {
+        return self.absoluteString.starts(with: url.absoluteString)
+    }
+
+    public func appendingQueryParameters(_ parameters: [String: String]?) -> URL {
         guard let parameters = parameters,
               var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: true) else {
                 return self
