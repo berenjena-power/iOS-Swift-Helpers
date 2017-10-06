@@ -1,15 +1,15 @@
 import Foundation
 
-public protocol Decodable {
+public protocol JSONDecodable {
     static func create(fromJSONData jsonData: Data) -> Self?
     static func create(fromJSON json: JSON) -> Self?
 }
 
-public protocol ArrayDecodable {
+public protocol JSONArrayDecodable {
     static func create(fromJSON json: [JSON]) -> [Self]?
 }
 
-public extension Decodable {
+public extension JSONDecodable {
     public static func create(fromJSONData jsonData: Data) -> Self? {
         do {
             guard let object = try JSONSerialization.jsonObject(with: jsonData, options: []) as? NSDictionary,

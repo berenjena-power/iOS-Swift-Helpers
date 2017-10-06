@@ -36,8 +36,8 @@
 		F298CD1B1E2F792000964328 /* AnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298CD1A1E2F792000964328 /* AnimationDirection.swift */; };
 		F298CD361E2FA46000964328 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298CD351E2FA46000964328 /* UIApplicationExtensions.swift */; };
 		F29C4A5F1E2FC850008018E4 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C4A5E1E2FC850008018E4 /* JSON.swift */; };
-		F29C4A611E2FC881008018E4 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C4A601E2FC881008018E4 /* Decodable.swift */; };
-		F29DB5601E41FCB10090FFB9 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29DB55F1E41FCB10090FFB9 /* Encodable.swift */; };
+		F29C4A611E2FC881008018E4 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C4A601E2FC881008018E4 /* JSONDecodable.swift */; };
+		F29DB5601E41FCB10090FFB9 /* JSONEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29DB55F1E41FCB10090FFB9 /* JSONEncodable.swift */; };
 		F29DB5621E41FCF40090FFB9 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29DB5611E41FCF40090FFB9 /* Value.swift */; };
 		F2A5C10D1E1F02790089EFCF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */; };
 		F2A5C1131E1F04930089EFCF /* PausableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C1121E1F04930089EFCF /* PausableTimer.swift */; };
@@ -87,8 +87,8 @@
 		F298CD1A1E2F792000964328 /* AnimationDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDirection.swift; sourceTree = "<group>"; };
 		F298CD351E2FA46000964328 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		F29C4A5E1E2FC850008018E4 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		F29C4A601E2FC881008018E4 /* Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
-		F29DB55F1E41FCB10090FFB9 /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		F29C4A601E2FC881008018E4 /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
+		F29DB55F1E41FCB10090FFB9 /* JSONEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodable.swift; sourceTree = "<group>"; };
 		F29DB5611E41FCF40090FFB9 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		F2A5C10C1E1F02790089EFCF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		F2A5C1121E1F04930089EFCF /* PausableTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausableTimer.swift; sourceTree = "<group>"; };
@@ -220,9 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				F29C4A5E1E2FC850008018E4 /* JSON.swift */,
+				F29DB55F1E41FCB10090FFB9 /* JSONEncodable.swift */,
+				F29C4A601E2FC881008018E4 /* JSONDecodable.swift */,
 				F2AE4ECC1EDEDFCE00AA4584 /* Form.swift */,
-				F29C4A601E2FC881008018E4 /* Decodable.swift */,
-				F29DB55F1E41FCB10090FFB9 /* Encodable.swift */,
 				F29DB5611E41FCF40090FFB9 /* Value.swift */,
 				F2AE4EC81EDEDF9A00AA4584 /* MultipartForm.swift */,
 				F2AE4ECA1EDEDFBD00AA4584 /* NetworkRequest.swift */,
@@ -345,7 +345,7 @@
 				F231E0BB1DE6FAC7004AEBD0 /* UIViewControllerExtensions.swift in Sources */,
 				F23CA1091DA81BDE006007EF /* StringExtensions.swift in Sources */,
 				F23CA0D11DA69DCD006007EF /* CGColorExtensions.swift in Sources */,
-				F29C4A611E2FC881008018E4 /* Decodable.swift in Sources */,
+				F29C4A611E2FC881008018E4 /* JSONDecodable.swift in Sources */,
 				F2E465031DB5052A00602771 /* CGFloatExtensions.swift in Sources */,
 				F2D721D31F7A70200044EDA0 /* UICollectionViewExtensions.swift in Sources */,
 				F2AE4ECB1EDEDFBD00AA4584 /* NetworkRequest.swift in Sources */,
@@ -364,7 +364,7 @@
 				F224D6C91DB2406500CBC4FF /* IOSDevice.swift in Sources */,
 				F231E0B91DE6FA94004AEBD0 /* IntExtensions.swift in Sources */,
 				F231E0BE1DE713ED004AEBD0 /* Utils.swift in Sources */,
-				F29DB5601E41FCB10090FFB9 /* Encodable.swift in Sources */,
+				F29DB5601E41FCB10090FFB9 /* JSONEncodable.swift in Sources */,
 				F224D6C31DB23C9900CBC4FF /* BundleExtensions.swift in Sources */,
 				F280EF891E76FE4F00485EAB /* UITableViewExtensions.swift in Sources */,
 				F29DB5621E41FCF40090FFB9 /* Value.swift in Sources */,

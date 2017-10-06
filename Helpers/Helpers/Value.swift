@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Value: ValueProtocol, CustomStringConvertible, Decodable, Encodable {
+public struct Value: ValueProtocol, CustomStringConvertible, JSONDecodable, JSONEncodable {
     public let id: Int
     public var value: String
     
@@ -9,7 +9,7 @@ public struct Value: ValueProtocol, CustomStringConvertible, Decodable, Encodabl
         self.value = value
     }
     
-    // MARK: - Protocol Decodable:
+    // MARK: - Protocol JSONDecodable:
     public static func create(fromJSON json: JSON) -> Value? {
         guard let id = json["id"] as? Int,
               let value = json["value"] as? String else {
@@ -20,7 +20,7 @@ public struct Value: ValueProtocol, CustomStringConvertible, Decodable, Encodabl
         return Value(id: id, value: value)
     }
     
-    // MARK: - Protocol Encodable:
+    // MARK: - Protocol JSONEncodable:
     public func toJSON() -> JSON {
         return ["id": id, "value": value]
     }

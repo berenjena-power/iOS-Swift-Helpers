@@ -1,9 +1,9 @@
 import Foundation
 
-public protocol Encodable {
+public protocol JSONEncodable {
     func toJSON() -> JSON
 }
 
-public protocol ArrayEncodable {
+public protocol JSONArrayEncodable {
     func toJSON() -> [JSON]
 }
