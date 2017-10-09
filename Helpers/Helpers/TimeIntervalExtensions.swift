@@ -13,7 +13,7 @@ public extension TimeInterval {
             final += "0"
             i += 1
         }
-        let index = final.index(final.startIndex, offsetBy: 3)
+        let index = final.index(final.startIndex, offsetBy: 2)
         final = "\(Int(whole))" + final[...index]
         return Int(final)!
     }
