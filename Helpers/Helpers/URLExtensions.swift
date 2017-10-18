@@ -16,4 +16,11 @@ public extension URL {
         urlComponents.queryItems = mutableQueryItems
         return urlComponents.url!
     }
+
+    static func fromString(_ string: String) -> URL {
+        guard let url = URL(string: string) else {
+            fatalError("Cannot build url from string: \"\(string)\"")
+        }
+        return url
+    }
 }
