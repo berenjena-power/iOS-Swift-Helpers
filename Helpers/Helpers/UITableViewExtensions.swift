@@ -5,6 +5,10 @@ public extension UITableView {
     public func register<T: UITableViewCell>(_ type: T.Type) {
         register(T.nib, forCellReuseIdentifier: T.nibName)
     }
+
+    public func register<H: UITableViewHeaderFooterView>(_ type: H.Type) {
+        register(H.nib, forHeaderFooterViewReuseIdentifier: H.nibName)
+    }
     
     public func dequeueReusableCell<T: UITableViewCell>() -> T {
         guard let cell = dequeueReusableCell(withIdentifier: T.nibName) as? T else {
