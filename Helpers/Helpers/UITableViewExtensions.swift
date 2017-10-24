@@ -21,4 +21,12 @@ public extension UITableView {
         
         return cell
     }
+
+    public func dequeueReusableHeaderFooterView<H: UITableViewHeaderFooterView>() -> H {
+        guard let header = dequeueReusableHeaderFooterView(withIdentifier: H.nibName) as? H else {
+            fatalError("\(H.nibName) could not be dequeued as \(H.self)")
+        }
+        
+        return header
+    }
 }
