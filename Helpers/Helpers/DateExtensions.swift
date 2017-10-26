@@ -125,12 +125,27 @@ public extension Date {
         return Calendar.current.date(byAdding: components, to: self)!
     }
     
-    public func months(from date: Date) -> Int {
+    public func totalDays(from date: Date) -> Int {
+        if self < date {
+            return 0
+        }
+        return Calendar.current.dateComponents([.day], from: date, to: self).day ?? 0
+    }
+    
+    public func days(from date: Date) -> [Date] {
+        var days = [Date]()
+        for i in 0...self.totalDays(from: date) {
+            days.append(date.dateByAdding(days: i))
+        }
+        return days
+    }
+    
+    public func totalMonths(from date: Date) -> Int {
         return Calendar.current.dateComponents([.month], from: date.firstDayOfCurrentMonth, to: self.firstDayOfCurrentMonth).month ?? 0
     }
     
     public func totalAbsoluteMonths(from date: Date) -> Int {
-        return self.months(from: date) + 1
+        return self.totalMonths(from: date) + 1
     }
     
     public var localTime: Time {
