@@ -42,7 +42,10 @@ public enum DeviceModel {
     case iPhoneSE
     case iPhone7
     case iPhone7Plus
-    
+    case iPhone8
+    case iPhone8Plus
+    case iPhoneX
+
     case iPodTouch1G
     case iPodTouch2G
     case iPodTouch3G
@@ -90,7 +93,10 @@ public enum DeviceModel {
         case .iPhoneSE: return "iPhone SE"
         case .iPhone7: return "iPhone 7"
         case .iPhone7Plus: return "iPhone 7 Plus"
-            
+        case .iPhone8: return "iPhone 8"
+        case .iPhone8Plus: return "iPhone 8 Plus"
+        case .iPhoneX: return "iPhone X"
+
         case .iPodTouch1G: return "iPod touch 1G"
         case .iPodTouch2G: return "iPod touch 2G"
         case .iPodTouch3G: return "iPod touch 3G"
@@ -148,7 +154,10 @@ fileprivate func parseDeviceModel(_ identifier: String) -> DeviceModel {
     case "iPhone9,2": return .iPhone7Plus
     case "iPhone9,3": return .iPhone7
     case "iPhone9,4": return .iPhone7Plus
-        
+    case "iPhone10,1", "iPhone10,4": return .iPhone8
+    case "iPhone10,2", "iPhone10,5": return .iPhone8Plus
+    case "iPhone10,3", "iPhone10,6": return .iPhoneX
+
     case "iPod1,1": return .iPodTouch1G
     case "iPod2,1": return .iPodTouch2G
     case "iPod3,1": return .iPodTouch3G

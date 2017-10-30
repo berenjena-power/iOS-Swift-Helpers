@@ -59,6 +59,8 @@
 		F2E465031DB5052A00602771 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E465021DB5052A00602771 /* CGFloatExtensions.swift */; };
 		F2EC7CA61F9F83A600F784B1 /* UITableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EC7CA51F9F83A600F784B1 /* UITableViewHeaderFooterView.swift */; };
 		F2EEDEDA1DB91BFA00314944 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EEDED91DB91BFA00314944 /* ArrayExtensions.swift */; };
+		F2F271481FA7264700405131 /* IOSDeviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F271471FA7264700405131 /* IOSDeviceTests.swift */; };
+		F2F2714A1FA7277400405131 /* UIDeviceExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F271491FA7277400405131 /* UIDeviceExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,8 @@
 		F2E465021DB5052A00602771 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
 		F2EC7CA51F9F83A600F784B1 /* UITableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewHeaderFooterView.swift; sourceTree = "<group>"; };
 		F2EEDED91DB91BFA00314944 /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		F2F271471FA7264700405131 /* IOSDeviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSDeviceTests.swift; sourceTree = "<group>"; };
+		F2F271491FA7277400405131 /* UIDeviceExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				F2DEA1061FA21A340039BDEA /* Models */,
+				F2F271461FA7262B00405131 /* Others */,
 				F2DEA10B1FA226E70039BDEA /* Extensions */,
 				F2DEA0FE1FA21A0E0039BDEA /* Info.plist */,
 			);
@@ -285,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				F2DEA10F1FA22C000039BDEA /* DateExtensionsTests.swift */,
+				F2F271491FA7277400405131 /* UIDeviceExtensionsTests.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -295,6 +301,14 @@
 				F2E465001DB4FE3500602771 /* UIPlaceHolderTextView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		F2F271461FA7262B00405131 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				F2F271471FA7264700405131 /* IOSDeviceTests.swift */,
+			);
+			name = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,8 +491,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2DEA1091FA21AA70039BDEA /* Time.swift in Sources */,
+				F2F271481FA7264700405131 /* IOSDeviceTests.swift in Sources */,
 				F2DEA1081FA21A430039BDEA /* TimeTests.swift in Sources */,
 				F2DEA1101FA22C000039BDEA /* DateExtensionsTests.swift in Sources */,
+				F2F2714A1FA7277400405131 /* UIDeviceExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
